@@ -125,6 +125,12 @@ for phrase in ["SEQUENCE PREFLIGHT", "CANONICAL ASSET LOCKS", "Native final-vide
     if phrase not in skill_text:
         fail(f"SKILL.md prevention/final-QA regression: missing {phrase}")
 
+shot_workflow = (ROOT/"workflows/shot-design.md").read_text(encoding="utf-8")
+if "knowledge/animal-creature-behavior-bible.md" not in shot_workflow:
+    fail("shot-design.md must reference animal-creature-behavior-bible.md")
+if "continuity bridge" not in shot_workflow.lower():
+    fail("shot-design.md must require an explicit continuity bridge")
+
 # Pipeline ordering regression check.
 skill = (ROOT/"SKILL.md").read_text(encoding="utf-8")
 a, b = skill.find("→ GENERATION STRATEGY"), skill.find("→ GENERATION SPEC")
