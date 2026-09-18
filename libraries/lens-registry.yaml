@@ -1,0 +1,187 @@
+registry_version: '1.0'
+lens_families:
+- id: ARRI_SIGNATURE_PRIME
+  brand: ARRI
+  family: Signature Prime
+  type: spherical
+  coverage: large_format
+  verified:
+    focal_range_mm: 12-280
+    typical_speed: T1.8 across most set
+    mount: LPL
+  directorial_inference:
+    character:
+    - modern-clean
+    - smooth skin
+    - controlled contrast
+    - dimensional bokeh
+    use_for:
+    - prestige narrative
+    - beauty
+    - premium commercial
+- id: ARRI_SIGNATURE_ZOOM
+  brand: ARRI
+  family: Signature Zoom
+  type: spherical_zoom
+  coverage: large_format
+  verified:
+    ranges:
+    - 16-32 T2.8
+    - 24-75 T2.8
+    - 45-135 T2.8
+    - 65-300 T2.8
+  directorial_inference:
+    character:
+    - matched modern spherical rendering
+    - high-end zoom flexibility
+- id: COOKE_S8_I_FF
+  brand: Cooke
+  family: S8/i FF
+  type: spherical
+  coverage: full_frame_plus
+  verified:
+    focal_lengths_mm:
+    - 18
+    - 21
+    - 25
+    - 27
+    - 32
+    - 35
+    - 40
+    - 50
+    - 65
+    - 75
+    - 100
+    - 135
+    speed: T1.4
+    mounts:
+    - PL
+    - LPL
+  directorial_inference:
+    character:
+    - organic
+    - film-inspired
+    - smooth focus falloff
+    - humanistic
+    use_for:
+    - faces
+    - drama
+    - romance
+    - low-light large-format
+- id: ZEISS_SUPREME_RADIANCE
+  brand: ZEISS
+  family: Supreme Prime Radiance
+  type: spherical
+  coverage: full_frame_plus
+  verified:
+    focal_lengths_mm:
+    - 18
+    - 21
+    - 25
+    - 29
+    - 35
+    - 40
+    - 50
+    - 65
+    - 85
+    - 100
+    - 135
+    speed: T1.5
+    special: controlled flare; slightly warmer than regular Supreme Primes
+  directorial_inference:
+    character:
+    - modern precision
+    - controlled expressive flare
+    - warm-neutral
+- id: LEITZ_HUGO
+  brand: Leitz Cine
+  family: HUGO
+  type: spherical_character
+  coverage: full_frame
+  verified:
+    focal_range_mm: 18-135 plus 50mm T1.0
+    series_I_speed: mostly T1.5
+    mounts:
+    - LPL
+    - L
+    image_circle_mm: 43.3
+  directorial_inference:
+    character:
+    - Leica M heritage
+    - lower contrast
+    - field curvature
+    - artful flare
+    - impressionistic falloff
+- id: PANAVISION_PRIMO_70
+  brand: Panavision
+  family: Primo 70
+  type: spherical
+  coverage: large_format
+  verified:
+    focal_lengths_mm:
+    - 14
+    - 24
+    - 27
+    - 35
+    - 40
+    - 50
+    - 65
+    - 80
+    - 100
+    - 125
+    - 150
+    - 200
+    - 250
+    typical_speed: T2.0
+    mount: Panavision 70
+  directorial_inference:
+    character:
+    - sharp detail with gentle organic falloff
+    - clean shadows
+    - large-format studio polish
+- id: HAWK_V_LITE_2X
+  brand: Vantage
+  family: Hawk V-Lite 2x
+  type: anamorphic
+  coverage: super35
+  verified:
+    squeeze: 2x
+    focal_lengths_mm:
+    - 28
+    - 35
+    - 45
+    - 55
+    - 65
+    - 80
+    - 110
+    - 140
+  directorial_inference:
+    character:
+    - classic anamorphic geometry
+    - widescreen emotional framing
+- id: HAWK_V_LITE_1_3X
+  brand: Vantage
+  family: Hawk V-Lite 1.3x
+  type: anamorphic
+  coverage: super35
+  verified:
+    squeeze: 1.3x
+    design_goal: use most of 16:9 sensor for 2.40:1
+  directorial_inference:
+    character:
+    - gentler anamorphic effect
+    - efficient sensor use
+- id: ANGENIEUX_OPTIMO_ULTRA_12X
+  brand: Angénieux
+  family: Optimo Ultra 12x
+  type: cinema_zoom
+  coverage: multi_format
+  verified:
+    zoom_ratio: 12x
+    full_frame_mode: 36-435mm T4.2
+    super35_mode: 24-290mm T2.8
+    u35_mode: 26-320mm T3.1
+  directorial_inference:
+    character:
+    - premium long-range zoom
+    - high-end set flexibility

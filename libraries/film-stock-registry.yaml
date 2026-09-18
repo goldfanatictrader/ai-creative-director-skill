@@ -1,0 +1,56 @@
+registry_version: '1.0'
+film_stocks:
+- id: KODAK_VISION3_50D_5203
+  brand: Kodak
+  stock: VISION3 50D 5203/7203
+  balance: daylight
+  speed_iso: 50
+  directorial_inference:
+    character:
+    - finest-grain daylight negative
+    - clean photochemical detail
+    use_for:
+    - exterior daylight
+    - landscape
+    - fashion
+- id: KODAK_VISION3_250D_5207
+  brand: Kodak
+  stock: VISION3 250D 5207/7207
+  balance: daylight
+  speed_iso: 250
+  verified_note: Kodak highlights increased highlight latitude and reduced shadow grain.
+  directorial_inference:
+    character:
+    - versatile daylight negative
+    - strong highlight flexibility
+- id: KODAK_VISION3_200T_5213
+  brand: Kodak
+  stock: VISION3 200T 5213/7213
+  balance: tungsten
+  speed_iso: 200
+  directorial_inference:
+    character:
+    - moderate-speed tungsten stock
+    - finer grain than 500T
+- id: KODAK_VISION3_500T_5219
+  brand: Kodak
+  stock: VISION3 500T 5219/7219
+  balance: tungsten
+  speed_iso: 500
+  verified_note: Kodak states reduced grain in shadows and extended highlight latitude.
+  directorial_inference:
+    character:
+    - modern high-speed negative
+    - controlled grain
+    - low-light flexibility
+- id: KODAK_VERITA_200D_5206
+  brand: Kodak
+  stock: VERITA 200D 5206/7206
+  balance: daylight
+  speed_iso: 200
+  verified_note: Kodak describes bold colors, warm skin tones, and deep blacks.
+  directorial_inference:
+    character:
+    - stronger color personality
+    - warm skin
+    - deep blacks

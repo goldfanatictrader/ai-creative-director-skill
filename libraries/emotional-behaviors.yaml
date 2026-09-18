@@ -1,0 +1,18 @@
+restrained_nervous:
+  gaze: briefly shifts once toward the exit
+  breath: one shallow inhale
+  mouth: slight lip tension
+  hands: remain still
+  shoulders: remain relaxed
+restrained_sadness:
+  gaze: slightly lowered
+  mouth: neutral with subtle tension
+  brow: minimal movement
+  breath: slower
+  gesture: none unless story-motivated
+quiet_confidence:
+  posture: upright but relaxed
+  gaze: stable
+  movement: economical
+  hands: quiet
+  expression: neutral to faintly assured

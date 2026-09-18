@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Continuity State",
+  "type": "object",
+  "properties": {
+    "character": {
+      "type": "object"
+    },
+    "wardrobe": {
+      "type": "object"
+    },
+    "props": {
+      "type": "object"
+    },
+    "spatial": {
+      "type": "object"
+    },
+    "temporal": {
+      "type": "object"
+    },
+    "lighting": {
+      "type": "object"
+    },
+    "narrative": {
+      "type": "object"
+    }
+  }
+}

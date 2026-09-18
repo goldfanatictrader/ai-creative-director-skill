@@ -1,0 +1,25 @@
+conceptual_node_order:
+- stage: INPUT
+  purpose: source interpretation / transform only
+- stage: TECH_REPAIR
+  purpose: noise, dead pixels, major source defects when required
+- stage: BALANCE
+  purpose: exposure, WB, tint
+- stage: MATCH
+  purpose: shot-to-shot continuity
+- stage: CONTRAST
+  purpose: tone structure
+- stage: COLOR_SEPARATION
+  purpose: hue / saturation architecture
+- stage: LOOK
+  purpose: show-level creative rendering
+- stage: SECONDARIES
+  purpose: skin, product, wardrobe, environment
+- stage: TEXTURE
+  purpose: grain, halation, bloom, controlled sharpening
+- stage: OUTPUT
+  purpose: display rendering / output transform
+- stage: TRIM
+  purpose: alternate-output creative trim if required
+rule: This is a conceptual order. Specific tools may move operations internally depending
+  on color-management design.

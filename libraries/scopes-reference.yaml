@@ -1,0 +1,26 @@
+scopes:
+  waveform:
+    use:
+    - exposure
+    - black level
+    - highlight level
+    - shot matching
+    warning: Do not force all scenes to identical levels.
+  rgb_parade:
+    use:
+    - channel balance
+    - neutral references
+    - channel clipping
+    warning: Creative source color may intentionally separate channels.
+  vectorscope:
+    use:
+    - hue
+    - saturation
+    - skin consistency
+    - brand color
+    warning: Skin-tone line is a diagnostic reference, not a universal target.
+  histogram:
+    use:
+    - distribution overview
+    - clipping clues
+    warning: Less spatially informative than waveform.

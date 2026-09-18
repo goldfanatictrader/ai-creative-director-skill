@@ -1,0 +1,29 @@
+scene_id: SC_001
+purpose: ""
+location_id: LOC_001
+time: ""
+weather: ""
+
+story_knowledge:
+  audience_knows: []
+  characters: {}
+
+characters:
+  CHAR_01:
+    position: ""
+    orientation: ""
+    emotional_state: ""
+    wardrobe_id: ""
+    holding: {}
+    physical_state: {}
+
+lighting_state:
+  source: ""
+  direction: ""
+  color_temperature: ""
+  practicals: []
+
+continuity:
+  screen_direction: ""
+  camera_side: ""
+  notes: []

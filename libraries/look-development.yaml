@@ -1,0 +1,55 @@
+look_archetypes:
+- name: Natural Modern Drama
+  contrast: moderate, soft shoulder
+  saturation: restrained-natural
+  skin: neutral to subtly warm
+  shadows: neutral or slightly cool
+  highlights: soft
+  texture: subtle grain optional
+  avoid:
+  - heavy teal-orange
+  - crushed blacks
+  - plastic skin
+- name: Premium Luxury Commercial
+  contrast: clean and controlled
+  saturation: selective
+  skin: polished but natural
+  shadows: clean dense blacks
+  highlights: precise specular control
+  texture: very clean or fine grain
+  avoid:
+  - muddy blacks
+  - random hue contamination
+  - inaccurate product color
+- name: Warm Nostalgic
+  contrast: soft-moderate
+  saturation: moderate with selective warmth
+  skin: warm natural
+  shadows: neutral/warm, not orange
+  highlights: gentle bloom optional
+  texture: film-inspired grain
+  avoid:
+  - blanket sepia
+  - orange skin
+  - excessive fade
+- name: Cold Clinical
+  contrast: controlled-hard
+  saturation: restrained
+  skin: protected from excessive cyan
+  shadows: cool-neutral
+  highlights: clean
+  texture: low grain / precise
+  avoid:
+  - dead skin
+  - uniform cyan cast
+- name: Neo-Noir
+  contrast: high with protected key information
+  saturation: selective
+  skin: motivated-source dependent
+  shadows: dense
+  highlights: isolated and expressive
+  texture: film or digital-clean depending world
+  avoid:
+  - blindly crushing all blacks
+  - generic teal-orange
+rule: Archetypes are starting points, not presets or LUT recipes.

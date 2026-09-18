@@ -1,0 +1,16 @@
+{
+  "name": "ai-creative-director-skill",
+  "version": "1.1.0",
+  "description": "Creative direction and generative-video supervision skill package — decision system for going from a raw brief to a generation-ready prompt, with camera/lens/film registries, color grading, casting, and AI-video failure/repair knowledge.",
+  "entrypoint": "SKILL.md",
+  "folders": [
+    "knowledge",
+    "workflows",
+    "schemas",
+    "libraries",
+    "evals",
+    "templates",
+    "examples",
+    "sources"
+  ]
+}

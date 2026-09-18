@@ -1,0 +1,454 @@
+registry_version: '1.0'
+updated: '2026-09-18'
+note: verified_specs are facts; directorial_inference is heuristic.
+cameras:
+- id: ARRI_ALEXA_265
+  brand: ARRI
+  model: ALEXA 265
+  category: digital_cinema
+  format: 65mm_digital
+  verified_specs:
+    sensor: ARRI A3X Rev.B CMOS
+    sensor_mm:
+    - 54.12
+    - 25.58
+    resolution:
+    - 6560
+    - 3100
+    dynamic_range_stops: 15
+    max_fps: 60
+    photosite_um: 8.25
+    recording: ARRIRAW / LogC4
+    mount: LPL
+  directorial_inference:
+    character:
+    - large-format dimensionality
+    - naturalistic color
+    - rich tonal separation
+    - premium cinematic scale
+    best_for:
+    - epic narrative
+    - prestige drama
+    - large-scale landscapes
+- id: ARRI_ALEXA_35
+  brand: ARRI
+  model: ALEXA 35
+  category: digital_cinema
+  format: super35
+  verified_specs:
+    sensor: ALEV 4 CMOS
+    sensor_mm:
+    - 27.99
+    - 19.22
+    resolution:
+    - 4608
+    - 3164
+    dynamic_range_stops: 17
+    max_fps: 120
+    ei_range: 160-6400
+    recording: ARRIRAW / ProRes / LogC4
+    mount: LPL
+  directorial_inference:
+    character:
+    - filmic highlight behavior
+    - natural skin
+    - high latitude
+    - classic S35 geometry
+    best_for:
+    - narrative
+    - commercial
+    - HDR
+    - action
+- id: SONY_VENICE_2_8K
+  brand: Sony
+  model: VENICE 2 8.6K
+  category: digital_cinema
+  format: full_frame
+  verified_specs:
+    sensor: 35mm full-frame CMOS
+    sensor_mm:
+    - 35.9
+    - 24.0
+    max_resolution:
+    - 8640
+    - 5760
+    latitude_stops: 16
+    dual_base_iso:
+    - 800
+    - 3200
+    mounts:
+    - PL
+    - E
+    recording: X-OCN
+  directorial_inference:
+    character:
+    - clean premium digital cinema
+    - strong low-light flexibility
+    - high-resolution large-format
+    best_for:
+    - feature film
+    - VFX
+    - virtual production
+    - night exterior
+- id: RED_V_RAPTOR_XL_X
+  brand: RED
+  model: V-RAPTOR XL [X] 8K VV
+  category: digital_cinema
+  format: vista_vision
+  verified_specs:
+    sensor: 35.4MP global shutter CMOS
+    sensor_mm:
+    - 40.96
+    - 21.6
+    resolution:
+    - 8192
+    - 4320
+    dynamic_range_stops: 17+
+    global_shutter: true
+    max_fps: 120 fps 8K 17:9; 150 fps 8K 2.4:1
+    recording: REDCODE RAW
+  directorial_inference:
+    character:
+    - high-detail modern cinema
+    - strong action/VFX suitability
+    - crisp motion geometry
+    best_for:
+    - action
+    - vehicles
+    - VFX plates
+    - commercial
+- id: PANAVISION_DXL2
+  brand: Panavision
+  model: Millennium DXL2
+  category: digital_cinema_rental
+  format: vista_vision
+  verified_specs:
+    sensor: RED Monstro 8K VV
+    sensor_mm:
+    - 40.96
+    - 21.6
+    resolution:
+    - 8192
+    - 4320
+    dynamic_range_stops: 16+ usable
+    base_iso: 1600
+    color_depth_bit: 16
+    availability: rental
+  directorial_inference:
+    character:
+    - large-format studio cinema
+    - Panavision optical integration
+    - premium flare workflow
+    best_for:
+    - studio features
+    - premium commercial
+- id: BLACKMAGIC_URSA_CINE_17K_65
+  brand: Blackmagic Design
+  model: URSA Cine 17K 65
+  category: digital_cinema
+  format: 65mm_digital
+  verified_specs:
+    sensor: RGBW 65mm format
+    sensor_mm:
+    - 50.81
+    - 23.32
+    resolution:
+    - 17520
+    - 8040
+    dynamic_range_stops: 16
+    max_fps: 60 fps 17K open gate; up to 170 fps selected 8K mode
+    mounts:
+    - PL
+    - LPL
+  directorial_inference:
+    character:
+    - very high-resolution 65mm scale
+    - large-format perspective
+    - strong VFX/reframing headroom
+    best_for:
+    - 65mm-style digital
+    - VFX
+    - high-detail commercial
+- id: CANON_C400
+  brand: Canon
+  model: EOS C400
+  category: digital_cinema
+  format: full_frame
+  verified_specs:
+    sensor: 6K full-frame BSI stacked CMOS
+    resolution:
+    - 6000
+    - 3164
+    dynamic_range_stops: 16
+    base_iso:
+    - 800
+    - 3200
+    - 12800
+    max_fps: 6K 60p RAW; 4K 120p S35; 2K 180p S16
+    autofocus: Dual Pixel CMOS AF II
+  directorial_inference:
+    character:
+    - versatile cinema capture
+    - strong autofocus utility
+    - flexible low-light bases
+    best_for:
+    - commercial
+    - documentary
+    - small crew
+    - narrative
+    - gimbal
+- id: DJI_RONIN_4D_8K
+  brand: DJI
+  model: Ronin 4D X9-8K
+  category: integrated_cinema_gimbal
+  format: full_frame
+  verified_specs:
+    sensor: 35mm full-frame CMOS
+    dynamic_range_stops: 14+
+    recording:
+    - ProRes RAW
+    - ProRes 4444 XQ
+    - ProRes 422 HQ
+    - H.264 10-bit
+    stabilization: integrated 4-axis gimbal with Z-axis
+    nd: built-in 9-stop ND system
+  directorial_inference:
+    character:
+    - floating controlled movement
+    - high integration
+    - fast setup for moving shots
+    best_for:
+    - long takes
+    - tracking
+    - music video
+    - commercial
+- id: PHANTOM_FLEX4K_GS
+  brand: Vision Research
+  model: Phantom Flex4K-GS
+  category: high_speed
+  format: 35mm_class
+  verified_specs:
+    sensor: 35mm 9.4MP global shutter
+    resolution:
+    - 4096
+    - 2304
+    high_speed: 1000 fps at 4K class
+    global_shutter: true
+  directorial_inference:
+    character:
+    - extreme temporal detail
+    - precise motion analysis
+    - cinematic high-speed
+    best_for:
+    - liquid
+    - explosions
+    - sports detail
+    - product destruction
+- id: PHASE_ONE_IQ4_150
+  brand: Phase One
+  model: IQ4 150MP
+  category: medium_format_still
+  format: medium_format_53x40
+  verified_specs:
+    sensor: CMOS
+    sensor_mm:
+    - 53.4
+    - 40.0
+    megapixels: 151
+    active_pixels:
+    - 14204
+    - 10652
+    color_depth_bit: 16
+    iso: 50-25600
+    long_exposure: up to 60 min
+  directorial_inference:
+    character:
+    - extreme still detail
+    - large-format tonal separation
+    - high microtexture resolution
+    best_for:
+    - beauty
+    - fashion
+    - product
+    - architecture
+    - landscape
+    - hero portraits
+- id: PHASE_ONE_XT_IQ4
+  brand: Phase One
+  model: XT + IQ4 150MP
+  category: technical_medium_format_still
+  format: medium_format_53x40
+  verified_specs:
+    system: XT body + IQ4 digital back + XT/Rodenstock optics
+    megapixels: 151
+    modular: true
+  directorial_inference:
+    character:
+    - technical precision
+    - perspective-control mindset
+    - extreme detail
+    best_for:
+    - architecture
+    - landscape
+    - product
+- id: HASSELBLAD_X2D_II_100C
+  brand: Hasselblad
+  model: X2D II 100C
+  category: medium_format_still
+  format: medium_format_44x33
+  verified_specs:
+    sensor: 100MP BSI CMOS
+    sensor_mm:
+    - 43.8
+    - 32.9
+    color_depth_bit: 16
+    dynamic_range_stops: 15.3
+    native_iso: 50
+    stabilization: up to 10 stops center
+    color: HNCS HDR
+  directorial_inference:
+    character:
+    - natural-color emphasis
+    - smooth tonal gradation
+    - premium portrait aesthetic
+    best_for:
+    - portrait
+    - fashion
+    - editorial
+    - landscape
+    - product
+- id: FUJIFILM_GFX100_II
+  brand: Fujifilm
+  model: GFX100 II
+  category: medium_format_hybrid
+  format: medium_format_44x33
+  verified_specs:
+    sensor: 102MP CMOS II HS
+    sensor_mm:
+    - 43.8
+    - 32.9
+    stabilization: up to 8 stops
+    video: up to 8K 29.97p/24p depending mode
+    mount: G
+  directorial_inference:
+    character:
+    - medium-format hybrid versatility
+    - high-detail stills
+    - cinematic hybrid use
+    best_for:
+    - fashion hybrid
+    - commercial still+motion
+    - portrait
+    - landscape
+- id: LEICA_M11_P
+  brand: Leica
+  model: M11-P
+  category: rangefinder_still
+  format: full_frame
+  verified_specs:
+    sensor: 60.3MP BSI CMOS
+    resolution:
+    - 9528
+    - 6328
+    iso: 64-50000
+    raw: 14-bit DNG
+    internal_storage_gb: 256
+  directorial_inference:
+    character:
+    - documentary intimacy
+    - rangefinder discipline
+    - compact premium still language
+    best_for:
+    - street
+    - documentary stills
+    - editorial
+    - travel
+- id: LEICA_SL3_S
+  brand: Leica
+  model: SL3-S
+  category: full_frame_hybrid
+  format: full_frame
+  verified_specs:
+    megapixels: 24
+    video:
+    - 6K open gate
+    - C6K
+    - 4K
+    - ProRes
+    - RAW
+    log: L-Log
+  directorial_inference:
+    character:
+    - Leica hybrid rendering
+    - compact premium motion/still crossover
+    best_for:
+    - editorial motion
+    - fashion
+    - documentary
+    - hybrid commercial
+- id: PANASONIC_S1RII
+  brand: Panasonic
+  model: LUMIX S1RII
+  category: full_frame_hybrid
+  format: full_frame
+  verified_specs:
+    megapixels: 44.3
+    video:
+    - 8K 30p
+    - 8.1K 30p
+    - 5.9K 60p
+    - 6.4K open gate
+    raw: ProRes RAW HQ supported
+    autofocus: Phase Hybrid AF
+  directorial_inference:
+    character:
+    - high-resolution hybrid
+    - open-gate social reframing
+    - production-efficient
+    best_for:
+    - hybrid commercial
+    - social campaigns
+    - travel
+    - small crew
+- id: PANAVISION_MILLENNIUM_XL2
+  brand: Panavision
+  model: Millennium XL2
+  category: 35mm_film_camera
+  format: 35mm_film
+  verified_specs:
+    capture: 35mm motion-picture film
+    sound_sync: true
+    max_fps: 50
+    magazine_ft:
+    - 400
+    - 1000
+    speed_ramp: 3-50 fps in 4 seconds
+    availability: rental
+  directorial_inference:
+    character:
+    - photochemical cinema
+    - classic Panavision workflow
+    - organic temporal texture
+    best_for:
+    - feature film
+    - period
+    - music video
+    - commercial
+- id: IMAX_KEIGHLEY_15_65
+  brand: IMAX
+  model: Keighley / next-generation IMAX film camera
+  category: 65mm_film_camera
+  format: 15_perforation_65mm
+  verified_specs:
+    capture: IMAX 15/65mm film
+    generation: next-generation IMAX film camera
+    deployment: four new 65mm film cameras deployed by 2026
+  directorial_inference:
+    character:
+    - maximum-scale photochemical capture
+    - extreme negative area
+    - event-cinema spectacle
+    best_for:
+    - epic landscapes
+    - large-scale action
+    - premium theatrical sequences

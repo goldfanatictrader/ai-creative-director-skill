@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shot",
+  "type": "object",
+  "required": [
+    "shot_id",
+    "purpose",
+    "duration_s",
+    "start_state",
+    "action",
+    "end_state",
+    "camera"
+  ],
+  "properties": {
+    "shot_id": {
+      "type": "string"
+    },
+    "scene_id": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "duration_s": {
+      "type": "number",
+      "minimum": 0.1
+    },
+    "start_state": {
+      "type": "object"
+    },
+    "action": {
+      "type": "object"
+    },
+    "performance": {
+      "type": "object"
+    },
+    "camera": {
+      "$ref": "camera.schema.json"
+    },
+    "motion": {
+      "type": "object"
+    },
+    "lighting": {
+      "type": "object"
+    },
+    "sound": {
+      "type": "object"
+    },
+    "end_state": {
+      "type": "object"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "complexity_score": {
+      "type": "number"
+    },
+    "generation_status": {
+      "enum": [
+        "READY",
+        "NOT_READY",
+        "GENERATED",
+        "APPROVED",
+        "REJECTED"
+      ]
+    }
+  }
+}

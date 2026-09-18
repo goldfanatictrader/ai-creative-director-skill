@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Character",
+  "type": "object",
+  "required": [
+    "character_id",
+    "visual_identity",
+    "performance_profile"
+  ],
+  "properties": {
+    "character_id": {
+      "type": "string"
+    },
+    "visual_identity": {
+      "type": "object"
+    },
+    "wardrobe_id": {
+      "type": "string"
+    },
+    "voice_profile": {
+      "type": "object"
+    },
+    "narrative_function": {
+      "type": "string",
+      "description": "protagonist, antagonist, mentor, love interest, witness, background, etc."
+    },
+    "cast_role_type": {
+      "type": "string",
+      "description": "lead, second_lead, supporting, comic_relief, mentor, rival, antagonist, recurring, guest, background_archetype"
+    },
+    "production_type": {
+      "type": "string",
+      "description": "live_action, 2d_cartoon, anime, 3d_animated, stop_motion, creature, robot"
+    },
+    "casting_brief": {
+      "type": "object",
+      "properties": {
+        "apparent_age": { "type": "string" },
+        "physical_presence": { "type": "string" },
+        "face_character": { "type": "string" },
+        "silhouette": { "type": "string" }
+      }
+    },
+    "performance_profile": {
+      "type": "object",
+      "properties": {
+        "baseline_posture": {
+          "type": "string"
+        },
+        "gesture_range": {
+          "type": "string"
+        },
+        "expression_range": {
+          "type": "string"
+        },
+        "movement_style": {
+          "type": "string"
+        },
+        "forbidden_mannerisms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "performance_dna": {
+      "type": "object",
+      "description": "Movement-casting fingerprint so the character is recognizable from silhouette/movement alone. See workflows/casting.md #15.",
+      "properties": {
+        "posture": { "type": "string" },
+        "locomotion": { "type": "string" },
+        "gesture_amplitude": { "type": "string" },
+        "reaction_latency": { "type": "string" },
+        "facial_intensity": { "type": "string" },
+        "head_motion": { "type": "string" },
+        "hand_behavior": { "type": "string" }
+      }
+    },
+    "non_human_rules": {
+      "type": "object",
+      "description": "For creature/robot casting only. See workflows/casting.md #19.",
+      "properties": {
+        "skeleton": { "type": "string" },
+        "limb_count": { "type": "number" },
+        "joint_limits": { "type": "string" },
+        "center_of_gravity": { "type": "string" },
+        "locomotion": { "type": "string" },
+        "communication_style": { "type": "string" }
+      }
+    },
+    "generation_survivability": {
+      "type": "object",
+      "description": "Pass/fail per transformation the production will put this design through. See workflows/casting.md #13.",
+      "properties": {
+        "front_to_profile": { "enum": ["PASS", "FAIL", "UNTESTED"] },
+        "closeup_to_fullbody": { "enum": ["PASS", "FAIL", "UNTESTED"] },
+        "day_to_night": { "enum": ["PASS", "FAIL", "UNTESTED"] },
+        "expression_range": { "enum": ["PASS", "FAIL", "UNTESTED"] },
+        "static_to_running": { "enum": ["PASS", "FAIL", "UNTESTED"] },
+        "solo_to_group": { "enum": ["PASS", "FAIL", "UNTESTED"] }
+      }
+    },
+    "cast_status": {
+      "enum": ["CANDIDATE", "SCREEN_TESTED", "LOCKED", "RECAST"]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+pairing_examples:
+- intent: prestige large-format drama
+  camera:
+  - ARRI_ALEXA_265
+  lenses:
+  - ARRI_SIGNATURE_PRIME
+  - PANAVISION_PRIMO_70
+- intent: natural humanistic faces
+  camera:
+  - ARRI_ALEXA_35
+  - SONY_VENICE_2_8K
+  lenses:
+  - COOKE_S8_I_FF
+  - LEITZ_HUGO
+- intent: clean VFX/action
+  camera:
+  - RED_V_RAPTOR_XL_X
+  - SONY_VENICE_2_8K
+  lenses:
+  - ARRI_SIGNATURE_PRIME
+  - ZEISS_SUPREME_RADIANCE
+- intent: premium anamorphic narrative
+  camera:
+  - ARRI_ALEXA_35
+  lenses:
+  - HAWK_V_LITE_2X
+- intent: extreme slow motion product
+  camera:
+  - PHANTOM_FLEX4K_GS
+  lenses:
+  - ARRI_SIGNATURE_PRIME
+  - ZEISS_SUPREME_RADIANCE
+- intent: hero beauty still
+  camera:
+  - PHASE_ONE_IQ4_150
+  - HASSELBLAD_X2D_II_100C
+- intent: true photochemical night
+  camera:
+  - PANAVISION_MILLENNIUM_XL2
+  film:
+  - KODAK_VISION3_500T_5219
+  lenses:
+  - HAWK_V_LITE_2X
+- intent: photochemical daylight premium
+  camera:
+  - PANAVISION_MILLENNIUM_XL2
+  - IMAX_KEIGHLEY_15_65
+  film:
+  - KODAK_VISION3_50D_5203
+  - KODAK_VISION3_250D_5207

@@ -1,0 +1,57 @@
+selection_rules:
+- when:
+  - extreme_still_detail
+  - product_texture
+  prefer:
+  - PHASE_ONE_IQ4_150
+  - PHASE_ONE_XT_IQ4
+- when:
+  - premium_medium_format_portrait
+  - natural_color
+  prefer:
+  - HASSELBLAD_X2D_II_100C
+- when:
+  - maximum_digital_cinema_latitude
+  - super35
+  prefer:
+  - ARRI_ALEXA_35
+- when:
+  - 65mm_digital_scale
+  prefer:
+  - ARRI_ALEXA_265
+  - BLACKMAGIC_URSA_CINE_17K_65
+- when:
+  - full_frame_low_light
+  - virtual_production
+  prefer:
+  - SONY_VENICE_2_8K
+- when:
+  - fast_action
+  - global_shutter
+  - vfx
+  prefer:
+  - RED_V_RAPTOR_XL_X
+- when:
+  - extreme_high_speed
+  prefer:
+  - PHANTOM_FLEX4K_GS
+- when:
+  - integrated_gimbal
+  - complex_tracking
+  prefer:
+  - DJI_RONIN_4D_8K
+- when:
+  - true_photochemical_35mm
+  prefer:
+  - PANAVISION_MILLENNIUM_XL2
+- when:
+  - imax_15_65_capture
+  prefer:
+  - IMAX_KEIGHLEY_15_65
+anti_rules:
+- Never rank cameras by price alone.
+- Never state that an AI image was literally captured by a camera unless it was.
+- Never assume a brand guarantees a visual style.
+- Validate lens image-circle coverage.
+- Validate exact crop/fps/shutter/codec mode.
+- Manufacturer dynamic-range numbers are not perfectly standardized across brands.

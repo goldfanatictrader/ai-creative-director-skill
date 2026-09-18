@@ -1,0 +1,12 @@
+cuts:
+- hard_cut
+- cut_on_action
+- reaction_cut
+- match_cut
+- graphic_match
+- movement_match
+- J_cut
+- L_cut
+- foreground_wipe
+- whip_transition
+rule: Choose a transition for narrative or rhythmic function, not novelty.

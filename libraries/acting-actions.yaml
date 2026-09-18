@@ -1,0 +1,13 @@
+safe_micro_actions:
+- single blink
+- small gaze shift
+- subtle inhale
+- slight lip tension
+- small head turn
+- minor weight shift
+higher_risk_actions:
+- complex hand-object manipulation
+- rapid full-body turn
+- running while interacting
+- two-person physical contact
+- multi-step choreography

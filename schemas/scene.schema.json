@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scene State",
+  "type": "object",
+  "required": [
+    "scene_id",
+    "purpose",
+    "start_state",
+    "end_state"
+  ],
+  "properties": {
+    "scene_id": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "location_id": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "weather": {
+      "type": "string"
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "start_state": {
+      "type": "object"
+    },
+    "end_state": {
+      "type": "object"
+    },
+    "story_knowledge": {
+      "type": "object"
+    },
+    "lighting_state": {
+      "type": "object"
+    },
+    "continuity": {
+      "type": "object"
+    }
+  }
+}

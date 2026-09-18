@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Creative Concept",
+  "type": "object",
+  "required": [
+    "name",
+    "one_sentence",
+    "creative_intent"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "one_sentence": {
+      "type": "string"
+    },
+    "creative_intent": {
+      "type": "object",
+      "properties": {
+        "understand": {
+          "type": "string"
+        },
+        "feel": {
+          "type": "string"
+        },
+        "remember": {
+          "type": "string"
+        }
+      }
+    },
+    "storytelling_mode": {
+      "type": "string"
+    },
+    "visual_language": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sound_language": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "avoid": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

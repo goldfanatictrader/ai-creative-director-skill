@@ -1,0 +1,22 @@
+face_drift:
+- reduce head rotation
+- shorten duration
+- strengthen reference
+- simplify camera
+hand_failure:
+- lock hands
+- remove gesture
+- use insert shot
+- reduce simultaneous movement
+foot_sliding:
+- reduce locomotion
+- specify contact
+- crop feet if irrelevant
+camera_warp:
+- single movement
+- lock horizon
+- avoid near-geometry path
+overacting:
+- replace emotion labels with micro-actions
+- lock shoulders
+- reduce gestures

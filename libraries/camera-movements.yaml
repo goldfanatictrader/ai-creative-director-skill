@@ -1,0 +1,23 @@
+movements:
+  locked:
+    complexity: 0
+  pan:
+    complexity: 1
+  tilt:
+    complexity: 1
+  dolly_in:
+    complexity: 2
+  dolly_out:
+    complexity: 2
+  truck:
+    complexity: 2
+  tracking:
+    complexity: 2
+  arc:
+    complexity: 3
+  orbit:
+    complexity: 3
+  crane:
+    complexity: 3
+  multi_axis_crane_orbit:
+    complexity: 4

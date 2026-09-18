@@ -1,0 +1,27 @@
+default_rules:
+- close-ups are reserved for information or emotional change
+- camera movement requires narrative motivation
+- avoid repeated identical shot scales unless intentional
+- use wide shots to establish geography before complex interaction when clarity is
+  needed
+- reaction shots should show a meaningful internal change, not filler
+example_project_grammar:
+  preferred_lenses_mm:
+  - 35
+  - 50
+  - 65
+  - 85
+  dialogue:
+    movement: restrained
+    orbit: false
+  emotional_closeup:
+    lens_mm: 85
+    movement:
+    - static
+    - slow_push_in
+  instability:
+    handheld: allowed
+  dutch_angle:
+    allowed_only_for:
+    - disorientation
+  random_zoom: false

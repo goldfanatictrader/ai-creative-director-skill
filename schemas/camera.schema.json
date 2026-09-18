@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Camera Specification",
+  "type": "object",
+  "properties": {
+    "shot_size": {
+      "type": "string"
+    },
+    "subject_orientation": {
+      "type": "string"
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "horizontal_angle_deg": {
+          "type": "number"
+        },
+        "height_m": {
+          "type": "number"
+        },
+        "distance_m": {
+          "type": "number"
+        }
+      }
+    },
+    "orientation": {
+      "type": "object",
+      "properties": {
+        "yaw_deg": {
+          "type": "number"
+        },
+        "pitch_deg": {
+          "type": "number"
+        },
+        "roll_deg": {
+          "type": "number"
+        }
+      }
+    },
+    "lens": {
+      "type": "object",
+      "properties": {
+        "focal_length_mm": {
+          "type": "number"
+        },
+        "lens_type": {
+          "type": "string"
+        }
+      }
+    },
+    "movement": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "direction": {
+          "type": "string"
+        },
+        "distance_m": {
+          "type": "number"
+        },
+        "arc_deg": {
+          "type": "number"
+        },
+        "duration_s": {
+          "type": "number"
+        },
+        "speed": {
+          "type": "string"
+        },
+        "acceleration": {
+          "type": "string"
+        }
+      }
+    },
+    "stabilization": {
+      "type": "string"
+    },
+    "framing_lock": {
+      "type": "boolean"
+    },
+    "focus": {
+      "type": "object"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

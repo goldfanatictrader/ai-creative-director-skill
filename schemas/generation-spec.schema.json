@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generation Specification",
+  "type": "object",
+  "required": [
+    "model_target",
+    "shot_id",
+    "prompt"
+  ],
+  "properties": {
+    "model_target": {
+      "type": "string"
+    },
+    "shot_id": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "text_to_video",
+        "image_to_video",
+        "reference_to_video",
+        "first_last_frame",
+        "video_edit",
+        "extend",
+        "other"
+      ]
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "negative_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "duration_s": {
+      "type": "number"
+    },
+    "aspect_ratio": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

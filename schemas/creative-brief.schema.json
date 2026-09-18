@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Creative Brief",
+  "type": "object",
+  "required": [
+    "objective",
+    "audience",
+    "format"
+  ],
+  "properties": {
+    "objective": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "desired_emotion": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "duration_seconds": {
+          "type": "number",
+          "minimum": 1
+        },
+        "aspect_ratio": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mandatory": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

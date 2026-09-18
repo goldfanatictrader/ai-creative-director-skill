@@ -1,0 +1,55 @@
+profiles:
+- id: ACES2_MANAGED
+  use_when:
+  - multi-camera
+  - VFX interchange
+  - multi-deliverable
+  - archival
+  pipeline:
+  - source
+  - ACES Input Transform
+  - ACES working representation
+  - grade/look
+  - ACES 2 Output Transform
+  - display
+  notes:
+  - Use correctly identified Input Transforms.
+  - Do not bake output transform into interchange media unless pipeline requires it.
+- id: RESOLVE_WIDE_GAMUT
+  use_when:
+  - Resolve-centered workflow
+  - mixed cameras
+  - HDR/SDR
+  - wide-gamut scene-referred grading
+  pipeline:
+  - source assignment
+  - Resolve color management/input mapping
+  - DaVinci Wide Gamut/Intermediate processing
+  - grade
+  - output mapping
+  notes:
+  - Exact Resolve configuration is project-dependent.
+  - Do not assume automatic tagging is always correct.
+- id: DISPLAY_REFERRED_SDR
+  use_when:
+  - already-finished Rec.709/sRGB sources
+  - simple social finishing
+  - graphics-heavy work
+  pipeline:
+  - display-referred source
+  - balance/match
+  - creative trim
+  - SDR output
+  notes:
+  - Avoid scene-referred exposure assumptions.
+  - Preserve graphic/brand colors.
+HDR:
+  BT2100_methods:
+  - PQ
+  - HLG
+  PQ_notes:
+  - absolute luminance-oriented HDR transfer function
+  - used by HDR10 and Dolby Vision mastering workflows
+  HLG_notes:
+  - broadcast-oriented HDR system
+  - not interchangeable with PQ encoding
