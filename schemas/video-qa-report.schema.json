@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "video-qa-report.schema.json",
+  "title": "Final Video QA Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset_id",
+    "review_scope",
+    "findings",
+    "measurements",
+    "verdict"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_scope": {
+      "type": "object",
+      "required": [
+        "native_video_review",
+        "audio_reviewed",
+        "whole_video_reviewed"
+      ],
+      "properties": {
+        "native_video_review": {
+          "type": "boolean"
+        },
+        "reviewer_model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "audio_reviewed": {
+          "type": "boolean"
+        },
+        "whole_video_reviewed": {
+          "type": "boolean"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "finding_id",
+          "category",
+          "evidence_type",
+          "confidence",
+          "severity",
+          "observation",
+          "publish_blocking",
+          "repair_route"
+        ],
+        "properties": {
+          "finding_id": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "timecode_start": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "timecode_end": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_type": {
+            "enum": [
+              "observed",
+              "measured",
+              "inferred"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "severity": {
+            "enum": [
+              "BLOCKER",
+              "MAJOR",
+              "MINOR",
+              "NOTE"
+            ]
+          },
+          "observation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supporting_measurement": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "publish_blocking": {
+            "type": "boolean"
+          },
+          "repair_route": {
+            "enum": [
+              "EDIT",
+              "REGENERATE",
+              "VIDEO_REPAIR",
+              "COMPOSITE_VFX",
+              "COLOR",
+              "SOUND",
+              "MASTERING",
+              "STORY_REDESIGN",
+              "NONE"
+            ]
+          },
+          "recommended_fix": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "disputed_or_unverified_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verdict": {
+      "enum": [
+        "PASS",
+        "CONDITIONAL",
+        "FAIL",
+        "PUBLISH_READY",
+        "NOT_PUBLISH_READY",
+        "CREATIVELY_READY_AWAITING_CLEARANCE"
+      ]
+    }
+  }
+}

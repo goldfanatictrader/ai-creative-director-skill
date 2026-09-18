@@ -1,0 +1,23 @@
+asset_id: ""
+review_scope:
+  native_video_review: false
+  reviewer_model: null
+  audio_reviewed: false
+  whole_video_reviewed: false
+  limitations: []
+findings: []
+measurements:
+  duration_s: null
+  width: null
+  height: null
+  aspect_ratio: null
+  video_codec: null
+  container: null
+  avg_frame_rate: null
+  audio_codec: null
+  audio_sample_rate_hz: null
+  audio_channels: null
+  integrated_lufs: null
+  true_peak_dbfs: null
+disputed_or_unverified_claims: []
+verdict: CONDITIONAL

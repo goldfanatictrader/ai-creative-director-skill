@@ -106,6 +106,25 @@ for phrase in ["performance_requirement:", "reference_requirement:", "continuity
     if phrase not in example:
         fail(f"examples/train-platform-shot.md not synchronized with shot schema: {phrase}")
 
+# Prevention / final-video QA regression checks.
+for required_path in [
+    "knowledge/prevention-first-generation.md",
+    "knowledge/animal-creature-behavior-bible.md",
+    "evals/sequence-preflight.md",
+    "knowledge/video-qa-bible.md",
+    "workflows/final-video-qa.md",
+    "evals/final-video-qa.md",
+    "schemas/video-qa-report.schema.json",
+    "templates/video-qa-report.yaml",
+]:
+    if not (ROOT / required_path).exists():
+        fail(f"required prevention/QA module missing: {required_path}")
+
+skill_text = (ROOT/"SKILL.md").read_text(encoding="utf-8")
+for phrase in ["SEQUENCE PREFLIGHT", "CANONICAL ASSET LOCKS", "Native final-video QA"]:
+    if phrase not in skill_text:
+        fail(f"SKILL.md prevention/final-QA regression: missing {phrase}")
+
 # Pipeline ordering regression check.
 skill = (ROOT/"SKILL.md").read_text(encoding="utf-8")
 a, b = skill.find("→ GENERATION STRATEGY"), skill.find("→ GENERATION SPEC")

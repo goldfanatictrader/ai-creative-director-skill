@@ -15,11 +15,11 @@ For each shot:
 11. Define end state.
 12. Populate structured continuity state.
 13. Mark `reference_requirement` as `required` or `not_applicable`; resolve canonical references when required.
-14. Score generative complexity.
-15. Run continuity and feasibility checks.
-16. Simplify if high risk.
-17. Mark the shot `READY` only if Gate A in `evals/generation-readiness.md` passes.
-18. Choose generation strategy.
-19. Build `schemas/generation-spec.schema.json` and mark it `READY` only when Gate B passes.
+16. Score generative complexity.
+17. Run continuity and feasibility checks.
+18. Simplify if high risk.
+19. Mark the shot `READY` only if Gate A in `evals/generation-readiness.md` passes.
+20. Choose generation strategy.
+21. Build `schemas/generation-spec.schema.json` and mark it `READY` only when Gate B passes.
 
 A shot being creatively ready is distinct from its generation request being executable.

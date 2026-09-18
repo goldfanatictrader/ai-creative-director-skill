@@ -8,11 +8,13 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `evals/continuity-check.md`
 - `evals/creative-critic.md`
 - `evals/creative-quality.md`
+- `evals/final-video-qa.md`
 - `evals/gap-redundancy-drift-check.md`
 - `evals/generation-readiness.md`
 - `evals/output-critique-repair.md`
 - `evals/performance-check.md`
 - `evals/publish-readiness.md`
+- `evals/sequence-preflight.md`
 - `evals/shot-feasibility.md`
 - `examples/project-grammar.md`
 - `examples/train-platform-shot.md`
@@ -20,6 +22,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `knowledge/ai-color-repair.md`
 - `knowledge/ai-video-failure-bible.md`
 - `knowledge/analytics-and-learning.md`
+- `knowledge/animal-creature-behavior-bible.md`
 - `knowledge/blocking-bible.md`
 - `knowledge/camera-bible.md`
 - `knowledge/camera-selection-bible.md`
@@ -42,12 +45,14 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `knowledge/motion-bible.md`
 - `knowledge/performance-bible.md`
 - `knowledge/post-production-bible.md`
+- `knowledge/prevention-first-generation.md`
 - `knowledge/production-design.md`
 - `knowledge/project-state-system.md`
 - `knowledge/reference-analysis.md`
 - `knowledge/sound-bible.md`
 - `knowledge/state-lifecycle.md`
 - `knowledge/storytelling-bible.md`
+- `knowledge/video-qa-bible.md`
 - `knowledge/video-taxonomy.md`
 - `libraries/acting-actions.yaml`
 - `libraries/camera-lens-pairing.yaml`
@@ -83,6 +88,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `schemas/project-state.schema.json`
 - `schemas/scene.schema.json`
 - `schemas/shot.schema.json`
+- `schemas/video-qa-report.schema.json`
 - `scripts/qa_repo.py`
 - `SKILL.md`
 - `sources/official-sources.md`
@@ -91,10 +97,12 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `templates/generation-spec.yaml`
 - `templates/scene-state.yaml`
 - `templates/shot-spec.md`
+- `templates/video-qa-report.yaml`
 - `workflows/casting.md`
 - `workflows/commercial.md`
 - `workflows/concept-development.md`
 - `workflows/film-development.md`
+- `workflows/final-video-qa.md`
 - `workflows/music-video.md`
 - `workflows/professional-color-grade.md`
 - `workflows/prompt-compilation.md`

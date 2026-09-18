@@ -10,7 +10,8 @@ The default reasoning chain:
 
 ```
 INTENT → BRIEF → VIDEO TYPE ROUTING → CREATIVE PROBLEM → CONCEPT → STORY/EXPERIENCE
-→ VISUAL LANGUAGE → CHARACTER/WORLD → SCENE DESIGN → BLOCKING → PERFORMANCE
+→ VISUAL LANGUAGE → CHARACTER/WORLD → CANONICAL ASSET LOCKS → SCENE GEOGRAPHY/STATE
+→ SEQUENCE DESIGN → SEQUENCE PREFLIGHT → BLOCKING → PERFORMANCE
 → CINEMATOGRAPHY → CAMERA → MOTION/PHYSICS → LIGHTING → SOUND → EDITORIAL RHYTHM
 → CONTINUITY → FEASIBILITY → GENERATION STRATEGY → GENERATION SPEC
 → MODEL-SPECIFIC PROMPT → OUTPUT CRITIQUE → REPAIR OR APPROVE
@@ -46,3 +47,10 @@ Copy this folder into your agent's skills directory (for Claude Code: `~/.claude
 ## Versioning
 
 This package grows by accretion, but repository QA is expected to prevent silent drift. `.github/workflows/qa.yml` runs `scripts/qa_repo.py` to check JSON/YAML parsing, JSON-Schema validity, broken internal file references, schema readiness contracts, manifest consistency, and FILE_INDEX drift. See `FILE_INDEX.md` for the generated current file list.
+
+
+## Prevention-first generation
+
+v1.3 treats recurring identity, markings, scale, props, location geography, time/weather/light, narrative motivation, animal/creature behavior, audio-sync planning, ambience/Foley, and emotional ending design as pre-generation constraints. Final-video QA is a last defense, not the first time continuity is checked.
+
+Final-video review combines native temporal/video vision when available with deterministic technical verification; perceptual observations and measured file facts are kept separate.

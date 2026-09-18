@@ -33,7 +33,10 @@ INTENT
 → STORY / EXPERIENCE
 → VISUAL LANGUAGE
 → CHARACTER / WORLD
-→ SCENE DESIGN
+→ CANONICAL ASSET LOCKS
+→ SCENE GEOGRAPHY / STATE
+→ SEQUENCE DESIGN
+→ SEQUENCE PREFLIGHT
 → BLOCKING
 → PERFORMANCE
 → CINEMATOGRAPHY
@@ -52,7 +55,7 @@ INTENT
 → CONDITIONAL POST-PRODUCTION
 → PUBLISH READINESS
 
-Two passes are easy to skip and shouldn't be: before FEASIBILITY, run `evals/creative-critic.md` (red-team the concept/shot itself) and `evals/audience-perception.md` (would a first-time viewer actually get it, blind/muted) — do this BEFORE spending generation budget, not after disliking the result. After every generation, run `evals/output-critique-repair.md` — a generated clip is not done just because it rendered; compare it against its own spec and either approve, repair, or escalate per that file's decision tree. Method/model choice (T2V vs I2V vs reference vs extend, which provider, fallback when an approach keeps failing) follows `knowledge/generation-strategy.md`, not habit. When a reference image/video/moodboard is involved anywhere in the chain, read it through `knowledge/reference-analysis.md` — extract parameters (lens/light/color/composition/camera/performance), don't just label it a mood.
+For any multi-shot sequence, prevention comes before generation: read `knowledge/prevention-first-generation.md` and run `evals/sequence-preflight.md` before the first expensive shot. Two passes are also easy to skip and shouldn't be: before FEASIBILITY, run `evals/creative-critic.md` (red-team the concept/shot itself) and `evals/audience-perception.md` (would a first-time viewer actually get it, blind/muted) — do this BEFORE spending generation budget, not after disliking the result. After every generation, run `evals/output-critique-repair.md` — a generated clip is not done just because it rendered; compare it against its own spec and either approve, repair, or escalate per that file's decision tree. Method/model choice (T2V vs I2V vs reference vs extend, which provider, fallback when an approach keeps failing) follows `knowledge/generation-strategy.md`, not habit. When a reference image/video/moodboard is involved anywhere in the chain, read it through `knowledge/reference-analysis.md` — extract parameters (lens/light/color/composition/camera/performance), don't just label it a mood.
 
 At CINEMATOGRAPHY, deciding what real-world image system a look should behave like (`knowledge/camera-selection-bible.md` + `libraries/camera-registry.yaml`/`lens-registry.yaml`/`film-stock-registry.yaml`/`camera-lens-pairing.yaml`) comes before CAMERA, which pins the shot-specific angle/height/lens/movement (`knowledge/camera-bible.md`). **Never paste a real camera/lens brand or model name into the final generation prompt as a literal noun** — translate the registry's `directorial_inference.character` language into the prompt instead; see `knowledge/camera-selection-bible.md` §Critical guard and `knowledge/ai-video-failure-bible.md` §Camera/lens named as literal object for the confirmed failure mode this prevents.
 
@@ -147,6 +150,25 @@ Every shot must have:
 - a reason to exist relative to adjacent shots.
 
 Do not add shots merely because they look cinematic.
+
+## Prevention-first generation rule
+
+A good final QA is not permission to generate loosely and repair later.
+
+Before a multi-shot sequence can generate:
+- recurring character/creature identity and distinctive markings must be canonical and locked,
+- body proportions and scale must be anchored against stable objects or co-characters,
+- recurring props and soft props must have canonical identity/state,
+- recurring locations must have canonical geography and visual anchors,
+- time/weather/wetness/light progression must be explicit,
+- every character action must have a readable narrative motivation or deliberate ambiguity,
+- each adjacent shot needs an explicit end-state → start-state continuity bridge,
+- animal/creature behavior must follow `knowledge/animal-creature-behavior-bible.md`,
+- visible vocalizations need an audio-sync strategy,
+- ambience/Foley obligations and the ending audio behavior must be planned,
+- sequence camera/lens/DOF/color grammar must be deliberate rather than randomly re-selected per shot.
+
+If these are unresolved, mark the sequence NOT READY and fix preproduction instead of hoping regeneration will solve it.
 
 ## Performance rule
 
@@ -486,6 +508,19 @@ and resolve the blocking issue first.
 FEASIBILITY answers whether the shot is plausible. GENERATION STRATEGY then decides how it should be made (T2V, I2V, reference-to-video, first/last-frame, edit/extend, compositing, traditional footage) and which verified model/provider is appropriate. Only after that decision should GENERATION SPEC be finalized, because method/provider capabilities determine required references, duration, aspect ratio, and other execution parameters.
 
 When model capabilities are time-sensitive, follow `knowledge/model-capabilities.md` and `libraries/model-capability-registry.yaml`: use a dated verified profile when fresh enough for the decision, otherwise verify current capabilities before making a material routing decision. Never invent support for a generation mode.
+
+## Native final-video QA
+
+When an assembled/master-candidate video exists, prefer native whole-video temporal review when a capable multimodal reviewer can ingest the video. If AV sync is being judged, confirm the reviewer also received audio.
+
+Use `knowledge/video-qa-bible.md`, `workflows/final-video-qa.md`, and `evals/final-video-qa.md`.
+
+Separate findings into:
+- `observed`: directly perceived in the audiovisual content,
+- `measured`: established by deterministic technical tooling,
+- `inferred`: explanation derived from evidence.
+
+Never label perceived choppiness as an encoded FPS drop without measurement. Never label audible distortion as master clipping without signal evidence.
 
 ## Conditional post-production and publish readiness
 

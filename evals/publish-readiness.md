@@ -1,6 +1,6 @@
 # Eval — Publish Readiness
 
-A rendered or edited video is not publish-ready until all six gates pass.
+A rendered or edited video is not publish-ready until all six gates pass. When an actual assembled/master-candidate file exists, run `evals/final-video-qa.md` first and feed its cross-validated findings into these gates.
 
 ## 1. Creative gate
 - brief objective is still satisfied
