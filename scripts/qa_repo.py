@@ -88,6 +88,24 @@ for key in {"model_target","shot_id","mode","prompt","duration_s","aspect_ratio"
     if key not in gen_required:
         fail(f"generation-spec.schema.json must require {key}")
 
+# Template/schema contract checks.
+gen_template = yaml.safe_load((ROOT/"templates/generation-spec.yaml").read_text(encoding="utf-8"))
+for key in {"model_target","shot_id","mode","prompt","duration_s","aspect_ratio","negative_constraints","generation_status"}:
+    if key not in gen_template:
+        fail(f"templates/generation-spec.yaml missing required schema field: {key}")
+if not isinstance(gen_template.get("duration_s"), (int, float)) or gen_template.get("duration_s", 0) <= 0:
+    fail("templates/generation-spec.yaml duration_s must be a positive example value")
+
+shot_template = (ROOT/"templates/shot-spec.md").read_text(encoding="utf-8")
+for phrase in ["performance requirement", "reference requirement", "Continuity", "Generation Status"]:
+    if phrase not in shot_template:
+        fail(f"templates/shot-spec.md missing readiness concept: {phrase}")
+
+example = (ROOT/"examples/train-platform-shot.md").read_text(encoding="utf-8")
+for phrase in ["performance_requirement:", "reference_requirement:", "continuity:", "generation_status: READY"]:
+    if phrase not in example:
+        fail(f"examples/train-platform-shot.md not synchronized with shot schema: {phrase}")
+
 # Pipeline ordering regression check.
 skill = (ROOT/"SKILL.md").read_text(encoding="utf-8")
 a, b = skill.find("→ GENERATION STRATEGY"), skill.find("→ GENERATION SPEC")

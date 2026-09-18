@@ -1,8 +1,12 @@
 model_target: ""
+provider: ""
+capability_profile_verified_at: null
 shot_id: ""
 mode: image_to_video
-duration_s: 0
+duration_s: 6
 aspect_ratio: "16:9"
+resolution: ""
+audio_required: false
 references: []
 
 prompt: |
@@ -11,3 +15,5 @@ prompt: |
 negative_constraints: []
 
 notes: []
+
+generation_status: DRAFT

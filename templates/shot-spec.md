@@ -7,32 +7,45 @@ Duration:
 
 ## Purpose
 
+## Readiness Flags
+- performance requirement: required | not_applicable
+- reference requirement: required | not_applicable
+
 ## Start State
 
 ## Action
 
 ## Performance
-- posture:
+Required only when `performance_requirement: required`.
+- initial pose:
 - weight:
 - gaze:
+- primary action:
+- secondary action:
 - hands:
+- torso:
 - face:
+- breath:
+- final pose:
 - locked body parts:
 
 ## Camera
-- size:
-- lens:
+- shot size:
+- subject orientation:
 - height:
 - distance:
 - horizontal angle:
 - pitch / roll:
-- movement:
-- path:
+- lens focal length:
+- lens type:
+- movement type:
+- path / direction:
 - speed:
 - acceleration:
 - stabilization:
 - framing lock:
-- focus:
+- focus target:
+- focus behavior:
 
 ## Motion
 - subject:
@@ -46,10 +59,21 @@ Duration:
 
 ## End State
 
+## Continuity
+- character:
+- wardrobe:
+- props:
+- spatial:
+- temporal:
+- lighting:
+- narrative:
+
 ## References
+Required when `reference_requirement: required`.
 
 ## Constraints
 
-## Complexity
+## Complexity Score
 
 ## Generation Status
+DRAFT | NOT_READY | READY | GENERATED | APPROVED | REJECTED
