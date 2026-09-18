@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "asset-state.schema.json",
+  "title": "Canonical Asset State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset_id",
+    "asset_type",
+    "version",
+    "status",
+    "canonical_reference",
+    "dependencies"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "asset_type": {
+      "enum": [
+        "character",
+        "wardrobe",
+        "prop",
+        "location",
+        "vehicle",
+        "graphic",
+        "audio",
+        "other"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "CANDIDATE",
+        "APPROVED",
+        "LOCKED",
+        "SUPERSEDED",
+        "STALE"
+      ]
+    },
+    "canonical_reference": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "state": {
+      "type": "object"
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

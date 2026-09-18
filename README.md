@@ -12,8 +12,9 @@ The default reasoning chain:
 INTENT → BRIEF → VIDEO TYPE ROUTING → CREATIVE PROBLEM → CONCEPT → STORY/EXPERIENCE
 → VISUAL LANGUAGE → CHARACTER/WORLD → SCENE DESIGN → BLOCKING → PERFORMANCE
 → CINEMATOGRAPHY → CAMERA → MOTION/PHYSICS → LIGHTING → SOUND → EDITORIAL RHYTHM
-→ CONTINUITY → FEASIBILITY → GENERATION SPEC → GENERATION STRATEGY
+→ CONTINUITY → FEASIBILITY → GENERATION STRATEGY → GENERATION SPEC
 → MODEL-SPECIFIC PROMPT → OUTPUT CRITIQUE → REPAIR OR APPROVE
+→ CONDITIONAL POST-PRODUCTION → PUBLISH READINESS
 ```
 
 Two adversarial passes are load-bearing, not optional: `evals/creative-critic.md` (red-team the concept itself before spending generation budget) and `evals/audience-perception.md` (would a first-time viewer actually understand this, muted/blind, without the treatment document explaining it).
@@ -21,13 +22,13 @@ Two adversarial passes are load-bearing, not optional: `evals/creative-critic.md
 ## What this package contains
 
 - **`SKILL.md`** — primary operating rules and decision framework (the entrypoint)
-- **`knowledge/`** (30 files) — discipline bibles: storytelling, cinematography, camera, camera/lens/film-stock selection (real verified equipment specs), color (creative + full professional grading pipeline), performance, motion, continuity, production design, sound, dialogue/voice, genre-specific grammars (action/horror/comedy/product), video-type taxonomy & router, project state/versioning/dependency system, human approval gates & feedback translation, governance/locks, AI-video failure patterns, and more
-- **`workflows/`** (10 files) — task-specific procedures: concept development, film/narrative development, commercial, music video, social video, storyboard, casting (live-action + animation/creature/robot), professional color grading, prompt compilation
-- **`schemas/`** (9 files) — JSON Schema contracts for creative brief, concept, character, scene, shot, camera, performance, continuity, generation spec
-- **`libraries/`** (16 files) — YAML vocabularies and rule tables: camera movements + complexity scores, real camera/lens/film-stock registries with verified specs, shot grammar, emotional behaviors, failure patterns, color grading order/look archetypes/scopes reference, transitions, lighting setups
-- **`evals/`** (10 files) — readiness and quality checks: creative-critic (red team), audience-perception, shot-feasibility (complexity scoring), continuity-check, performance-check, gap/redundancy/drift-check, output-critique-repair, color-qc, generation-readiness, creative-quality
-- **`templates/`** (5 files) — reusable output templates: creative treatment, shot spec, scene state, generation spec, color grading brief
-- **`examples/`** (2 files) — worked examples showing the full chain from intent to compiled prompt
+- **`knowledge/`** — discipline bibles: storytelling, cinematography, camera, camera/lens/film-stock selection (real verified equipment specs), color (creative + full professional grading pipeline), performance, motion, continuity, production design, sound, dialogue/voice, genre-specific grammars (action/horror/comedy/product), video-type taxonomy & router, project state/versioning/dependency system, human approval gates & feedback translation, governance/locks, AI-video failure patterns, and more
+- **`workflows/`** — task-specific procedures: concept development, film/narrative development, commercial, music video, social video, storyboard, casting (live-action + animation/creature/robot), professional color grading, prompt compilation
+- **`schemas/`** — JSON Schema contracts for creative brief, concept, character, scene, shot, camera, performance, continuity, generation spec
+- **`libraries/`** — YAML vocabularies and rule tables: camera movements + complexity scores, real camera/lens/film-stock registries with verified specs, shot grammar, emotional behaviors, failure patterns, color grading order/look archetypes/scopes reference, transitions, lighting setups
+- **`evals/`** — readiness and quality checks: creative-critic (red team), audience-perception, shot-feasibility (complexity scoring), continuity-check, performance-check, gap/redundancy/drift-check, output-critique-repair, color-qc, generation-readiness, creative-quality
+- **`templates/`** — reusable output templates: creative treatment, shot spec, scene state, generation spec, color grading brief
+- **`examples/`** — worked examples showing the full chain from intent to compiled prompt
 - **`sources/`** — official manufacturer/technical sources backing the camera/lens/film/color registries (facts vs. directorial heuristics are labeled separately throughout)
 
 ## Explicit scope boundary
@@ -44,4 +45,4 @@ Copy this folder into your agent's skills directory (for Claude Code: `~/.claude
 
 ## Versioning
 
-This package grows by accretion — new knowledge/eval/workflow files get added as gaps are found in real use, cross-referenced from `SKILL.md` and from each other. See `FILE_INDEX.md` for the current full file list.
+This package grows by accretion, but repository QA is expected to prevent silent drift. `.github/workflows/qa.yml` runs `scripts/qa_repo.py` to check JSON/YAML parsing, JSON-Schema validity, broken internal file references, schema readiness contracts, manifest consistency, and FILE_INDEX drift. See `FILE_INDEX.md` for the generated current file list.

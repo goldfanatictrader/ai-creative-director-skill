@@ -1,70 +1,116 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "camera.schema.json",
   "title": "Camera Specification",
   "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "shot_size",
+    "subject_orientation",
+    "position",
+    "lens",
+    "movement",
+    "stabilization",
+    "focus"
+  ],
   "properties": {
     "shot_size": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "subject_orientation": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "position": {
       "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "horizontal_angle_deg",
+        "height_m",
+        "distance_m"
+      ],
       "properties": {
         "horizontal_angle_deg": {
-          "type": "number"
+          "type": "number",
+          "minimum": -360,
+          "maximum": 360
         },
         "height_m": {
-          "type": "number"
+          "type": "number",
+          "minimum": 0
         },
         "distance_m": {
-          "type": "number"
+          "type": "number",
+          "exclusiveMinimum": 0
         }
       }
     },
     "orientation": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "yaw_deg": {
-          "type": "number"
+          "type": "number",
+          "minimum": -360,
+          "maximum": 360
         },
         "pitch_deg": {
-          "type": "number"
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
         },
         "roll_deg": {
-          "type": "number"
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
         }
       }
     },
     "lens": {
       "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "focal_length_mm",
+        "lens_type"
+      ],
       "properties": {
         "focal_length_mm": {
-          "type": "number"
+          "type": "number",
+          "exclusiveMinimum": 0
         },
         "lens_type": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         }
       }
     },
     "movement": {
       "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
       "properties": {
         "type": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "direction": {
           "type": "string"
         },
         "distance_m": {
-          "type": "number"
+          "type": "number",
+          "minimum": 0
         },
         "arc_deg": {
-          "type": "number"
+          "type": "number",
+          "minimum": -360,
+          "maximum": 360
         },
         "duration_s": {
-          "type": "number"
+          "type": "number",
+          "exclusiveMinimum": 0
         },
         "speed": {
           "type": "string"
@@ -75,13 +121,29 @@
       }
     },
     "stabilization": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "framing_lock": {
       "type": "boolean"
     },
     "focus": {
-      "type": "object"
+      "type": "object",
+      "required": [
+        "target",
+        "behavior"
+      ],
+      "properties": {
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "behavior": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
     },
     "constraints": {
       "type": "array",

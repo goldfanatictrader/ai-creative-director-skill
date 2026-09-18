@@ -1,8 +1,8 @@
 # File Index
 
-- `README.md`
-- `SKILL.md`
-- `manifest.json`
+Generated/maintained as the repository inventory. Repository QA fails when this list drifts from tracked files.
+
+- `.github/workflows/qa.yml`
 - `evals/audience-perception.md`
 - `evals/color-qc.md`
 - `evals/continuity-check.md`
@@ -12,9 +12,11 @@
 - `evals/generation-readiness.md`
 - `evals/output-critique-repair.md`
 - `evals/performance-check.md`
+- `evals/publish-readiness.md`
 - `evals/shot-feasibility.md`
 - `examples/project-grammar.md`
 - `examples/train-platform-shot.md`
+- `FILE_INDEX.md`
 - `knowledge/ai-color-repair.md`
 - `knowledge/ai-video-failure-bible.md`
 - `knowledge/analytics-and-learning.md`
@@ -39,6 +41,7 @@
 - `knowledge/model-capabilities.md`
 - `knowledge/motion-bible.md`
 - `knowledge/performance-bible.md`
+- `knowledge/post-production-bible.md`
 - `knowledge/production-design.md`
 - `knowledge/project-state-system.md`
 - `knowledge/reference-analysis.md`
@@ -59,18 +62,29 @@
 - `libraries/lens-registry.yaml`
 - `libraries/lighting-setups.yaml`
 - `libraries/look-development.yaml`
+- `libraries/model-capability-registry.yaml`
 - `libraries/scopes-reference.yaml`
 - `libraries/shot-grammar.yaml`
 - `libraries/transitions.yaml`
+- `LICENSE`
+- `manifest.json`
+- `README.md`
+- `schemas/asset-state.schema.json`
+- `schemas/assumption.schema.json`
 - `schemas/camera.schema.json`
 - `schemas/character.schema.json`
 - `schemas/concept.schema.json`
 - `schemas/continuity.schema.json`
 - `schemas/creative-brief.schema.json`
+- `schemas/decision-record.schema.json`
+- `schemas/dependency.schema.json`
 - `schemas/generation-spec.schema.json`
 - `schemas/performance.schema.json`
+- `schemas/project-state.schema.json`
 - `schemas/scene.schema.json`
 - `schemas/shot.schema.json`
+- `scripts/qa_repo.py`
+- `SKILL.md`
 - `sources/official-sources.md`
 - `templates/color-grading-brief.md`
 - `templates/creative-treatment.md`

@@ -44,11 +44,13 @@ INTENT
 → EDITORIAL RHYTHM
 → CONTINUITY
 → FEASIBILITY
-→ GENERATION SPEC
 → GENERATION STRATEGY
+→ GENERATION SPEC
 → MODEL-SPECIFIC PROMPT
 → OUTPUT CRITIQUE
 → REPAIR OR APPROVE
+→ CONDITIONAL POST-PRODUCTION
+→ PUBLISH READINESS
 
 Two passes are easy to skip and shouldn't be: before FEASIBILITY, run `evals/creative-critic.md` (red-team the concept/shot itself) and `evals/audience-perception.md` (would a first-time viewer actually get it, blind/muted) — do this BEFORE spending generation budget, not after disliking the result. After every generation, run `evals/output-critique-repair.md` — a generated clip is not done just because it rendered; compare it against its own spec and either approve, repair, or escalate per that file's decision tree. Method/model choice (T2V vs I2V vs reference vs extend, which provider, fallback when an approach keeps failing) follows `knowledge/generation-strategy.md`, not habit. When a reference image/video/moodboard is involved anywhere in the chain, read it through `knowledge/reference-analysis.md` — extract parameters (lens/light/color/composition/camera/performance), don't just label it a mood.
 
@@ -478,6 +480,27 @@ Otherwise mark:
 NOT READY FOR GENERATION
 
 and resolve the blocking issue first.
+
+## Generation strategy precedes generation spec
+
+FEASIBILITY answers whether the shot is plausible. GENERATION STRATEGY then decides how it should be made (T2V, I2V, reference-to-video, first/last-frame, edit/extend, compositing, traditional footage) and which verified model/provider is appropriate. Only after that decision should GENERATION SPEC be finalized, because method/provider capabilities determine required references, duration, aspect ratio, and other execution parameters.
+
+When model capabilities are time-sensitive, follow `knowledge/model-capabilities.md` and `libraries/model-capability-registry.yaml`: use a dated verified profile when fresh enough for the decision, otherwise verify current capabilities before making a material routing decision. Never invent support for a generation mode.
+
+## Conditional post-production and publish readiness
+
+For a single concept/storyboard/shot-prompt request, stop at the requested deliverable. For a request that asks for a finished or publish-ready video, continue after shot approval through:
+
+ASSEMBLY EDIT
+→ PICTURE LOCK
+→ VFX / CLEANUP / COMPOSITING
+→ COLOR
+→ SOUND POST
+→ MOTION GRAPHICS / TITLES
+→ MASTERING / DELIVERY
+→ `evals/publish-readiness.md`
+
+Use `knowledge/post-production-bible.md` as the decision layer. This skill still specifies and audits execution; actual NLE, VFX, grading, mixing, encoding, and platform upload require connected execution tools.
 
 ## Output discipline
 

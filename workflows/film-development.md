@@ -18,10 +18,21 @@
 16. storyboard
 17. animatic
 18. asset approval
-19. generation specs
-20. generation
-21. continuity review
-22. editorial
-23. sound
-24. VFX / color
-25. QC
+19. feasibility
+20. generation strategy
+21. generation specs
+22. generation
+23. output critique / repair / shot approval
+24. sequence assembly
+25. continuity + gap/redundancy/drift review
+26. assembly edit
+27. picture lock
+28. VFX / cleanup / compositing
+29. color
+30. sound post / music / final mix
+31. motion graphics / titles / captions
+32. mastering / delivery versions
+33. publish-readiness audit
+34. final approval
+
+For concept-only or preproduction requests, stop at the requested stage. The post-production continuation applies when the user asks for a finished/publish-ready result.

@@ -1,28 +1,115 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "continuity.schema.json",
   "title": "Continuity State",
   "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "character",
+    "wardrobe",
+    "props",
+    "spatial",
+    "temporal",
+    "lighting",
+    "narrative"
+  ],
   "properties": {
     "character": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": true
     },
     "wardrobe": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": true
     },
     "props": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": true
     },
     "spatial": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "screen_direction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "camera_side": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "eyeline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "location_geometry_state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
     },
     "temporal": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "time_of_day": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "elapsed_story_time": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "weather_state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lifecycle_state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
     },
     "lighting": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": true
     },
     "narrative": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "audience_knows": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "character_knowledge": {
+          "type": "object"
+        },
+        "unresolved_setups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
     }
   }
 }

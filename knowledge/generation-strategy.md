@@ -1,6 +1,6 @@
 # Generation Strategy
 
-Domain: choosing HOW a shot gets made — which generation method, which model, and what to do when it fails — as a deliberate decision, not a default reflex to whatever tool was used last. Sits between FEASIBILITY and GENERATION SPEC in the SKILL.md chain.
+Domain: choosing HOW a shot gets made — which generation method, which model, and what to do when it fails — as a deliberate decision, not a default reflex to whatever tool was used last. Sits after FEASIBILITY and before GENERATION SPEC in the SKILL.md chain. Strategy must be chosen first because generation method/provider capabilities determine what a valid executable spec requires.
 
 ## 1. Generation Method Selection
 Not every shot should be text-to-video by default. Choose per shot:
@@ -29,7 +29,7 @@ If a shot fails 3-5 generation attempts with the same approach, STOP retrying th
 - **Duration** — shorter clips have less room to drift
 - **Camera** — reduce movement complexity, or switch to locked
 - **Generation method** — switch from T2V to I2V with a stronger keyframe, or vice versa
-- **Provider/model** — if the current provider/model is having an infra-level bad day, diagnose per `ai-video-failure-bible.md` §3 before assuming the creative approach is at fault
+- **Provider/model** — if the current provider/model is having an infra-level bad day, diagnose per `ai-video-failure-bible.md` → Infrastructure failures mistaken for model failures before assuming the creative approach is at fault
 
 Repeating the exact same failing prompt more than once or twice is a strategy failure, not persistence.
 
@@ -49,3 +49,13 @@ This prevents relearning the same lesson shot after shot within one project, wit
 - Has a deliberate method been chosen per §1, not just defaulted to whatever was used last?
 - If this is a retry, has something concrete changed per §3 (not the same prompt again)?
 - If a previous shot in this project already found a working approach for a similar shot type, is that approach being reused (§5)?
+
+
+## 7. Capability freshness gate
+
+Provider capabilities change rapidly. Before a material routing decision, consult `libraries/model-capability-registry.yaml`.
+
+- If a capability profile is marked `verified` and is within its freshness window, it may be used.
+- If it is stale, unknown, preview-only, region-dependent, or absent, verify current official/provider documentation before relying on it.
+- Record the verification date and source in the project notes when the choice materially affects cost, identity consistency, duration, audio, editing, or reference support.
+- Never infer a feature simply because another model from the same provider supports it.

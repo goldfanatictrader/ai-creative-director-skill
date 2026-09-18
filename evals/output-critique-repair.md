@@ -1,6 +1,6 @@
 # Eval — Output Critique & Repair Loop
 
-Domain: what happens AFTER a shot is generated — closing the loop from raw output back to a decision, instead of treating "it generated" as "it's done." This is the step the chain in `SKILL.md` doesn't cover explicitly (the chain ends at MODEL-SPECIFIC PROMPT) — this file is what happens next, every time.
+Domain: what happens AFTER a shot is generated — closing the loop from raw output back to a decision, instead of treating "it generated" as "it's done." This is the mandatory post-generation step in the `SKILL.md` chain. A generated result is not complete merely because it rendered.
 
 ## 1. Video Critique — Check Output Against Spec, Not Against Vibes
 Compare the generated result to the shot's own `generation-spec`/`shot-spec` (see `templates/shot-spec.md`), not to a general sense of whether it "looks cool":
@@ -21,7 +21,7 @@ A shot that "looks great" but fails identity or continuity is a REJECT, not a "k
 When comparing two candidate generations, don't just pick "the better-looking one." Score both against the shot's stated purpose (`creative_intent`, `storytelling-bible.md`) and the emotional beat it's meant to hit. A technically cleaner take that reads the wrong emotion loses to a rougher take that reads correctly — technical polish is fixable in post to a point; wrong emotional read usually isn't.
 
 ## 3. Shot Approval Memory
-Once a shot is marked APPROVED (see `generation-spec.schema.json` → `generation_status`), it does not get silently regenerated or swapped later just because a new attempt "looks a bit better." Changing an approved shot is a deliberate decision, not an automatic upgrade — if a later pass produces something better, present it as a proposed change, don't substitute it silently.
+Once a generation is marked APPROVED (see `schemas/generation-spec.schema.json` → `generation_status`, and keep the linked shot state synchronized), it does not get silently regenerated or swapped later just because a new attempt "looks a bit better." Changing an approved shot is a deliberate decision, not an automatic upgrade — if a later pass produces something better, present it as a proposed change, don't substitute it silently.
 
 ## 4. Repair Decision Tree
 On a failed/rejected shot, decide the repair path before touching the generator again:

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "decision-record.schema.json",
+  "title": "Decision Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_id",
+    "date",
+    "decision",
+    "source_type",
+    "status"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "enum": [
+        "user_request",
+        "reference",
+        "brand_rule",
+        "director_decision",
+        "technical_constraint",
+        "model_limitation"
+      ]
+    },
+    "source_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "ACTIVE",
+        "SUPERSEDED",
+        "UNLOCKED"
+      ]
+    },
+    "reversible": {
+      "type": "boolean"
+    },
+    "affects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

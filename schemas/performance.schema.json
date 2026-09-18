@@ -1,28 +1,44 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "performance.schema.json",
   "title": "Performance Specification",
   "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "initial_pose",
+    "gaze",
+    "primary_action",
+    "hands",
+    "torso",
+    "final_pose",
+    "locked_body_parts"
+  ],
   "properties": {
     "initial_pose": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "weight_distribution": {
       "type": "string"
     },
     "gaze": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "primary_action": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "secondary_action": {
       "type": "string"
     },
     "hands": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "torso": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "face": {
       "type": "string"
@@ -31,7 +47,8 @@
       "type": "string"
     },
     "final_pose": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "locked_body_parts": {
       "type": "array",

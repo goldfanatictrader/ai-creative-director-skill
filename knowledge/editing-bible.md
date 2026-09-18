@@ -1,42 +1,67 @@
 # Editing Bible
 
-## Edit decisions
-- why cut
-- when cut
-- what changes across cut
-- what visual or emotional continuity is preserved
+Editing is story reconstruction in time, not merely joining generated clips.
 
-## Common tools
+## Editorial intent
+For every cut, know why the cut happens:
+- new information
+- emotional reaction
+- action continuation
+- attention shift
+- rhythm change
+- time/space compression
+- deliberate rupture
+
+## Core tools
 - cut on action
 - reaction cut
 - J-cut
 - L-cut
+- eyeline match
 - match cut
 - graphic match
 - movement match
-- eyeline match
 - hard cut
-- montage
 - jump cut
+- montage
 - hold
+
+## Coverage and editability
+Design enough coverage for the intended edit:
+- master / geography
+- primary performance coverage
+- reaction
+- insert / detail
+- cutaway
+- transition coverage when required
+
+Generated shots should have usable in/out frames where practical. A shot whose only usable action touches the first or last frame is editorially fragile.
 
 ## Rhythm
 Track:
 - average shot length
-- density of cuts
-- escalation
-- release
+- information density
+- emotional intensity
+- action density
+- dialogue density
 - silence
-- music beat relationship
+- musical structure
+- escalation and release
 
-## Coverage
-When dialogue or performance matters, consider:
-- master
-- medium
-- close
-- reaction
-- insert
-- cutaway
+Do not confuse faster cutting with better pacing.
 
-## Rule
-A visually impressive shot that cannot cut cleanly may be a poor production choice.
+## Continuity
+Check:
+- screen direction
+- eyeline
+- action state
+- prop state
+- body position
+- emotional progression
+- sound continuity
+
+## Picture lock
+Picture lock means editorial timing and shot selection are approved strongly enough that downstream VFX, color, sound, graphics, and mastering can proceed without casual shot replacement. Late changes require impact analysis through `knowledge/governance-and-locks.md`.
+
+## Deliverable adaptation
+A 60s, 30s, 15s, and 6s version should preserve the core idea through deliberate re-editing, not uniform speed-up or mechanical trimming.

@@ -3,7 +3,7 @@
 Domain: physical/temporal states that change progressively across a production and must be tracked deliberately rather than left to drift — transformation, time, weather, damage/dirt/injury, and object/location lifecycle. Extends `continuity-bible.md` with the TIME dimension specifically (continuity-bible tracks what must stay the SAME; this file tracks what is allowed/expected to CHANGE, and how).
 
 ## 1. Rule
-A progressive state (a wound healing worse, rain intensifying, a location decaying) needs a small number of DEFINED states across the production, not continuous unplanned drift. Define the states up front the same way `cinematography-bible.md` §7 Color Script plans discrete acts rather than a vague "gets colder somehow."
+A progressive state (a wound healing worse, rain intensifying, a location decaying) needs a small number of DEFINED states across the production, not continuous unplanned drift. Define the states up front the same way `color-bible.md` → Color script plans discrete acts rather than a vague "gets colder somehow."
 
 ## 2. Transformation Rules
 For any character/object that changes form (aging, costume change, injury progression, magical/VFX transformation), define per state:
@@ -17,7 +17,7 @@ state: BEFORE / DURING / AFTER (or as many discrete states as the story needs)
 Transformations are a `workflows/casting.md` §18 visual-arc concern at the level of one specific change, not a whole-production arc.
 
 ## 3. Temporal State Engine
-Track time explicitly across scenes: time of day, elapsed time between scenes, season. This is the connective tissue `continuity-bible.md` §8 Temporal Continuity asks for — this file is where it's actually recorded (in `project-state/scenes/*.yaml` per `project-state-system.md`), not just conceptually acknowledged.
+Track time explicitly across scenes: time of day, elapsed time between scenes, season. This is the connective tissue `continuity-bible.md` → Temporal asks for — this file is where it's actually recorded (in `project-state/scenes/*.yaml` per `project-state-system.md`), not just conceptually acknowledged.
 
 ## 4. Weather Continuity
 Rain intensity, wind, wetness (of surfaces AND characters), puddles, cloud cover — these must progress logically, not reset between shots in the same continuous scene, and must be deliberately planned to CHANGE across a time-skip rather than staying suspiciously identical.

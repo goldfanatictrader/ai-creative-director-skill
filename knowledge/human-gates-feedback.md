@@ -28,10 +28,10 @@ Real feedback is almost never actionable as given. Translate it into the specifi
 | Vague feedback | Likely actual domain(s) | Concrete translation |
 |---|---|---|
 | "kurang mahal" / "doesn't feel premium" | lighting, color, pacing, production design | slower cuts, higher contrast/lower saturation, cleaner production design, fewer but more considered shots |
-| "kurang emosional" / "not emotional enough" | performance, pacing, music/sound, shot size | closer shot size on the beat, restrained-not-bigger performance (see `performance-bible.md` §8), more space held before the cut |
-| "terlalu AI" / "looks too AI-generated" | motion naturalism, texture, lighting motivation, micro-motion | check against `ai-video-failure-bible.md` patterns, add secondary motion (`motion-bible.md` §10), reduce mechanical camera movement |
+| "kurang emosional" / "not emotional enough" | performance, pacing, music/sound, shot size | closer shot size on the beat, restrained-not-bigger performance (see `performance-bible.md`), more space held before the cut |
+| "terlalu AI" / "looks too AI-generated" | motion naturalism, texture, lighting motivation, micro-motion | check against `ai-video-failure-bible.md` patterns, add secondary motion (`motion-bible.md` → Secondary motion), reduce mechanical camera movement |
 | "kurang nendang" / "needs more punch" | hook (`evals/audience-perception.md` §4), editorial rhythm, sound design hit points | almost never means "add more effects" — usually means the first 1-3 seconds or a cut point is weak |
-| "pacing-nya aneh" / "pacing feels off" | shot duration, cut rhythm, emotional arc mismatch | check `storytelling-bible.md` §9 — is the arc actually driving the pacing, or is pacing generic |
+| "pacing-nya aneh" / "pacing feels off" | shot duration, cut rhythm, emotional arc mismatch | check `storytelling-bible.md` — is the arc actually driving the pacing, or is pacing generic |
 
 Never revise directly off the vague version — always restate the translated, concrete interpretation back before acting on it, so a wrong translation gets caught immediately instead of producing another round of "still not right."
 
@@ -43,7 +43,7 @@ When presenting a revised version, state what actually changed, plainly:
 ```
 V1 → V2: performance intensity reduced (per "kurang emosional" feedback — now restrained per performance-bible.md rather than bigger); camera unchanged; wardrobe unchanged.
 ```
-This does two things: confirms the right thing was changed (not everything, not the wrong thing), and makes it easy for the human reviewer to spot a **regression** — something that got worse as a side effect of fixing the requested thing (see `evals/drift-detection.md` §Creative Regression Check).
+This does two things: confirms the right thing was changed (not everything, not the wrong thing), and makes it easy for the human reviewer to spot a **regression** — something that got worse as a side effect of fixing the requested thing (see `evals/gap-redundancy-drift-check.md` → Style / Identity / World / Editorial / Sound Drift).
 
 ## 6. Self-check
 - Is this decision actually this skill's to make, or does it belong at a human gate (§1)?

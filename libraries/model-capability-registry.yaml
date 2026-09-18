@@ -1,0 +1,55 @@
+registry_version: "1.0"
+updated: "2026-09-18"
+freshness_policy:
+  default_max_age_days: 30
+  material_decisions_require_current_verification: true
+  official_source_preferred: true
+
+profile_template:
+  provider: ""
+  model: ""
+  status: unverified
+  verified_at: null
+  official_sources: []
+  capabilities:
+    text_to_video: unknown
+    image_to_video: unknown
+    multi_reference: unknown
+    first_last_frame: unknown
+    extend: unknown
+    video_edit: unknown
+    motion_transfer: unknown
+    audio_generation: unknown
+    dialogue_lipsync: unknown
+  limits:
+    documented_max_duration_s: unknown
+    practical_duration_s: unknown
+    aspect_ratios: []
+    resolutions: []
+    accepted_reference_types: []
+  restrictions:
+    regions: []
+    preview_or_experimental: unknown
+  project_evidence: []
+  failure_modes: []
+
+models:
+  - provider: Google
+    model: Veo
+    status: verify_before_use
+  - provider: OpenAI
+    model: Sora
+    status: verify_before_use
+  - provider: Kuaishou
+    model: Kling
+    status: verify_before_use
+  - provider: ByteDance
+    model: Seedance
+    status: verify_before_use
+  - provider: Runway
+    model: Runway
+    status: verify_before_use
+
+notes:
+  - Model names above are routing families/placeholders, not claims about current capabilities.
+  - Populate a dated verified profile from current official documentation before relying on a feature that materially affects production.

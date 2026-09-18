@@ -1,7 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "shot.schema.json",
   "title": "Shot",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "shot_id",
     "purpose",
@@ -9,30 +11,51 @@
     "start_state",
     "action",
     "end_state",
-    "camera"
+    "camera",
+    "performance_requirement",
+    "reference_requirement",
+    "generation_status"
   ],
   "properties": {
     "shot_id": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "scene_id": {
       "type": "string"
     },
     "purpose": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "duration_s": {
       "type": "number",
-      "minimum": 0.1
+      "exclusiveMinimum": 0
     },
     "start_state": {
       "type": "object"
     },
     "action": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "end_state": {
       "type": "object"
     },
+    "performance_requirement": {
+      "enum": [
+        "required",
+        "not_applicable"
+      ]
+    },
+    "reference_requirement": {
+      "enum": [
+        "required",
+        "not_applicable"
+      ]
+    },
     "performance": {
-      "type": "object"
+      "$ref": "performance.schema.json"
     },
     "camera": {
       "$ref": "camera.schema.json"
@@ -46,14 +69,16 @@
     "sound": {
       "type": "object"
     },
-    "end_state": {
-      "type": "object"
+    "continuity": {
+      "$ref": "continuity.schema.json"
     },
     "references": {
       "type": "array",
       "items": {
-        "type": "string"
-      }
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
     },
     "constraints": {
       "type": "array",
@@ -62,16 +87,84 @@
       }
     },
     "complexity_score": {
-      "type": "number"
+      "type": "number",
+      "minimum": 0
     },
     "generation_status": {
       "enum": [
-        "READY",
+        "DRAFT",
         "NOT_READY",
+        "READY",
         "GENERATED",
         "APPROVED",
         "REJECTED"
       ]
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "performance_requirement": {
+            "const": "required"
+          }
+        },
+        "required": [
+          "performance_requirement"
+        ]
+      },
+      "then": {
+        "required": [
+          "performance"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reference_requirement": {
+            "const": "required"
+          }
+        },
+        "required": [
+          "reference_requirement"
+        ]
+      },
+      "then": {
+        "required": [
+          "references"
+        ],
+        "properties": {
+          "references": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "generation_status": {
+            "enum": [
+              "READY",
+              "GENERATED",
+              "APPROVED"
+            ]
+          }
+        },
+        "required": [
+          "generation_status"
+        ]
+      },
+      "then": {
+        "required": [
+          "motion",
+          "lighting",
+          "continuity",
+          "constraints",
+          "complexity_score"
+        ]
+      }
+    }
+  ]
 }

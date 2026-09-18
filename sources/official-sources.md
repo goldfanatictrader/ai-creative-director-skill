@@ -33,7 +33,7 @@ Checked September 2026.
 - Kodak Motion Picture Films — https://www.kodak.com/en/motion/products/
 
 Interpretive words such as organic, clinical, humanistic, dreamlike, premium, or dimensional are directorial heuristics, not objective specifications.
-# Official Sources and Standards Notes
+## Color Management Standards Sources
 
 Checked September 2026.
 

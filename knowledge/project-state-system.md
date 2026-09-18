@@ -63,7 +63,7 @@ Keep an `assumptions.yaml` register for anything tagged `assumed` or `inferred` 
 The point of the register is that an assumption can be found and corrected cheaply before it propagates into ten locked shots — silently treating an assumption as fact is how a small misread becomes an expensive continuity problem later.
 
 ## 6. Conflict Resolution
-When two sources of truth disagree (a brand bible says "clean, minimal" but a supplied reference is chaotic/gritty), don't quietly average them or silently pick one. Name the conflict and resolve by the authority order already established in `continuity-bible.md` §11 (Reference Authority Hierarchy), extended here to non-visual conflicts:
+When two sources of truth disagree (a brand bible says "clean, minimal" but a supplied reference is chaotic/gritty), don't quietly average them or silently pick one. Name the conflict and resolve by the authority order already established in `continuity-bible.md` → Reference Authority Hierarchy, extended here to non-visual conflicts:
 ```
 1. explicit locked user/director decision
 2. brand/client rule

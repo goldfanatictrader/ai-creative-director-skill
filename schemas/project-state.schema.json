@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "project-state.schema.json",
+  "title": "Project State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "project_id",
+    "version",
+    "brief",
+    "active_concept",
+    "locks",
+    "scenes",
+    "assets",
+    "assumptions",
+    "decisions"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brief": {
+      "type": "object"
+    },
+    "active_concept": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "locks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "$ref": "assumption.schema.json"
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "decision-record.schema.json"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "$ref": "dependency.schema.json"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

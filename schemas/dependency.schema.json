@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dependency.schema.json",
+  "title": "Dependency Edge",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "upstream",
+    "downstream",
+    "relationship"
+  ],
+  "properties": {
+    "upstream": {
+      "type": "string",
+      "minLength": 1
+    },
+    "downstream": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relationship": {
+      "enum": [
+        "identity",
+        "wardrobe",
+        "prop",
+        "location",
+        "continuity",
+        "style",
+        "technical",
+        "editorial",
+        "other"
+      ]
+    },
+    "stale_if_upstream_changes": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

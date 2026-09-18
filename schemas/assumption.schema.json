@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "assumption.schema.json",
+  "title": "Assumption",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "assumption",
+    "state",
+    "affects"
+  ],
+  "properties": {
+    "assumption": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "enum": [
+        "known",
+        "assumed",
+        "inferred",
+        "unresolved",
+        "locked"
+      ]
+    },
+    "affects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confirm_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
