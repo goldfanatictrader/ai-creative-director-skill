@@ -41,11 +41,16 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `examples/assets/realism-level-lookbook/04-animation-3d.jpg`
 - `examples/assets/realism-level-lookbook/05-stop-motion.jpg`
 - `examples/assets/realism-level-lookbook/06-motion-graphics.jpg`
+- `examples/assets/vfx-compositing-lookbook/00-original-plate.jpg`
+- `examples/assets/vfx-compositing-lookbook/01-sky-replacement.jpg`
+- `examples/assets/vfx-compositing-lookbook/02-object-removal.jpg`
+- `examples/assets/vfx-compositing-lookbook/03-atmosphere-integration.jpg`
 - `examples/camera-registry-lookbook.md`
 - `examples/color-grading-genre-lookbook.md`
 - `examples/project-grammar.md`
 - `examples/realism-level-lookbook.md`
 - `examples/train-platform-shot.md`
+- `examples/vfx-compositing-lookbook.md`
 - `FILE_INDEX.md`
 - `knowledge/ai-color-repair.md`
 - `knowledge/ai-video-failure-bible.md`
