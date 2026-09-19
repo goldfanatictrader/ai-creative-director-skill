@@ -17,6 +17,11 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `evals/publish-readiness.md`
 - `evals/sequence-preflight.md`
 - `evals/shot-feasibility.md`
+- `examples/assets/animal-creature-behavior-lookbook/01-generic-vague.jpg`
+- `examples/assets/animal-creature-behavior-lookbook/02-full-checklist.jpg`
+- `examples/assets/animal-creature-behavior-lookbook/03-weather-interaction.jpg`
+- `examples/assets/animal-creature-behavior-lookbook/04-contact-behavior.jpg`
+- `examples/assets/animal-creature-behavior-lookbook/05-invented-creature.jpg`
 - `examples/assets/camera-bible-lookbook/01-floor-frontal.jpg`
 - `examples/assets/camera-bible-lookbook/02-knee-threequarter.jpg`
 - `examples/assets/camera-bible-lookbook/03-eye-profile.jpg`
@@ -65,6 +70,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `examples/assets/vfx-compositing-lookbook/01-sky-replacement.jpg`
 - `examples/assets/vfx-compositing-lookbook/02-object-removal.jpg`
 - `examples/assets/vfx-compositing-lookbook/03-atmosphere-integration.jpg`
+- `examples/animal-creature-behavior-lookbook.md`
 - `examples/camera-bible-lookbook.md`
 - `examples/camera-registry-lookbook.md`
 - `examples/color-grading-genre-lookbook.md`
