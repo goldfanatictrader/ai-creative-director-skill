@@ -17,6 +17,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `evals/publish-readiness.md`
 - `evals/sequence-preflight.md`
 - `evals/shot-feasibility.md`
+- `examples/camera-registry-lookbook.md`
 - `examples/color-grading-genre-lookbook.md`
 - `examples/project-grammar.md`
 - `examples/train-platform-shot.md`
