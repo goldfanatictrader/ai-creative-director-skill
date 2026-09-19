@@ -41,6 +41,12 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `examples/assets/color-grading-genre-lookbook/05-scifi-night.jpg`
 - `examples/assets/color-grading-genre-lookbook/06-period-day.jpg`
 - `examples/assets/color-grading-genre-lookbook/06-period-evening.jpg`
+- `examples/assets/lighting-bible-lookbook/01-window.jpg`
+- `examples/assets/lighting-bible-lookbook/02-practical-lamp.jpg`
+- `examples/assets/lighting-bible-lookbook/03-fluorescent.jpg`
+- `examples/assets/lighting-bible-lookbook/04-fire.jpg`
+- `examples/assets/lighting-bible-lookbook/05-vehicle-headlights.jpg`
+- `examples/assets/lighting-bible-lookbook/06-neon-signage.jpg`
 - `examples/assets/realism-level-lookbook/01-photoreal.jpg`
 - `examples/assets/realism-level-lookbook/02-stylized-live-action.jpg`
 - `examples/assets/realism-level-lookbook/03-animation-2d.jpg`
@@ -54,6 +60,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `examples/camera-bible-lookbook.md`
 - `examples/camera-registry-lookbook.md`
 - `examples/color-grading-genre-lookbook.md`
+- `examples/lighting-bible-lookbook.md`
 - `examples/project-grammar.md`
 - `examples/realism-level-lookbook.md`
 - `examples/train-platform-shot.md`
