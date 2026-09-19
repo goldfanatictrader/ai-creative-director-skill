@@ -27,7 +27,12 @@ All twelve frames below were test-rendered once each and reviewed against their 
 
 ### Test frames
 - **Bright/exterior:** "a woman in her early 30s, short dark hair, plain oatmeal cardigan, sitting on a park bench under an overcast sky at midday. Soft natural daylight, muted restrained saturation, believable natural skin tone, gentle controlled contrast, fully motivated ambient light, no stylization."
+
+  ![Natural drama — day exterior](assets/color-grading-genre-lookbook/01-natural-drama-day.jpg)
+
 - **Dark/interior:** "the same woman ... standing in a quiet home kitchen at night. Single warm overhead pendant light, soft naturalistic shadow, restrained saturation, believable skin, fully motivated practical light only, gentle contrast."
+
+  ![Natural drama — night interior](assets/color-grading-genre-lookbook/01-natural-drama-night.jpg)
 
 QA: both frames read as the same restrained, motivated-light world; skin luminance/warmth track together day to night. **Pass.**
 
@@ -50,7 +55,12 @@ QA: both frames read as the same restrained, motivated-light world; skin luminan
 
 ### Test frames
 - **Bright/interior:** "a woman ... tailored black dress, standing in a sunlit marble-floored boutique interior with sheer curtains, holding a minimalist glass perfume bottle. Clean specular highlight on the glass bottle and marble floor, deep clean blacks in the dress, selective warm gold accent saturation, precise controlled product color, otherwise restrained palette."
+
+  ![Luxury commercial — day interior](assets/color-grading-genre-lookbook/02-luxury-commercial-day.jpg)
+
 - **Dark/night:** "the same woman ... standing in an elegant dim cocktail lounge at night, the same minimalist glass perfume bottle placed on the bar beside her. Soft warm key light, clean specular highlights on glassware and jewelry, deep rich controlled blacks, precise warm product color on the bottle, selective saturation, otherwise restrained."
+
+  ![Luxury commercial — night lounge](assets/color-grading-genre-lookbook/02-luxury-commercial-night.jpg)
 
 QA: product color and material read consistently across both lighting conditions; blacks stay clean (not crushed/noisy) in both. **Pass.**
 
@@ -72,7 +82,12 @@ QA: product color and material read consistently across both lighting conditions
 
 ### Test frames
 - **Dusk/exterior:** "a woman ... dark coat, walking alone into a foggy pine forest at dusk. Controlled underexposure, strategic cold desaturated green color contamination, large negative space around her small figure, single sliver of fading light on the horizon, selective highlight attention."
+
+  ![Horror — dusk exterior](assets/color-grading-genre-lookbook/03-horror-dusk.jpg)
+
 - **Dark/interior:** "the same woman ... standing in a decayed abandoned hallway at night holding a flashlight. The flashlight beam is the only highlight in frame, everything else in deep controlled shadow, sickly desaturated green-cyan color contamination, strong negative space behind her."
+
+  ![Horror — night interior](assets/color-grading-genre-lookbook/03-horror-night.jpg)
 
 QA: the green-cyan contamination and single-highlight discipline hold in both frames; negative space is compositional in both, not empty framing. **Pass.**
 
@@ -93,7 +108,12 @@ QA: the green-cyan contamination and single-highlight discipline hold in both fr
 
 ### Test frames
 - **Bright/exterior:** "a woman ... bright yellow top, laughing brightly on a colorful sunny street lined with pastel-colored shopfronts. High-key even lighting, open saturated cheerful palette, completely readable face and expression, bright clean contrast, no harsh shadows."
+
+  ![Comedy — day exterior](assets/color-grading-genre-lookbook/04-comedy-day.jpg)
+
 - **Bright/interior:** "the same woman ... laughing in a cheerful brightly lit kitchen full of colorful props and fruit. Even soft light, no harsh shadows, saturated cheerful open palette, completely readable face and expression, bright clean contrast."
+
+  ![Comedy — bright interior](assets/color-grading-genre-lookbook/04-comedy-interior.jpg)
 
 QA: face stays fully readable and evenly lit in both frames — no incidental hard shadow crept in on the interior version. **Pass.**
 
@@ -115,7 +135,12 @@ QA: face stays fully readable and evenly lit in both frames — no incidental ha
 
 ### Test frames
 - **Exterior/dusk:** "a woman ... sleek grey technical jacket, standing on a minimalist futuristic rooftop overlooking a clean geometric skyline at dusk. Deliberate controlled practical lighting in a single warm-white accent color, avoiding generic teal-and-orange, clean tonal separation between subject and environment, controlled source-color logic."
+
+  ![Sci-fi — dusk exterior](assets/color-grading-genre-lookbook/05-scifi-dusk.jpg)
+
 - **Interior/night:** "the same woman ... standing inside a minimalist futuristic control room at night. Cool white ambient functional light with one deliberate warm accent color on a control panel, clean tonal color separation, no random neon, controlled deliberate source-color logic."
+
+  ![Sci-fi — night interior](assets/color-grading-genre-lookbook/05-scifi-night.jpg)
 
 QA: both frames commit to one deliberate accent color rather than a default teal/orange split-tone; subject stays cleanly separated from environment in both. **Pass.**
 
@@ -137,7 +162,12 @@ QA: both frames commit to one deliberate accent color rather than a default teal
 
 ### Test frames
 - **Day/exterior:** "a woman ... period-accurate 1920s-style coat and cloche hat, walking down an old cobblestone street with period architecture in soft overcast daylight. Palette grounded in production design: muted browns, ivory, dust tones; subtle fine film grain and gentle halation; naturalistic desaturation, no artificial sepia tint or wash."
+
+  ![Period — day exterior](assets/color-grading-genre-lookbook/06-period-day.jpg)
+
 - **Evening/interior:** "the same woman ... period-accurate 1920s-style dress, seated in a period-furnished parlor room in the evening, lit by warm oil-lamp practicals. Rich wood tones, soft film-like texture, naturalistic warm palette grounded in production design, no artificial sepia wash."
+
+  ![Period — evening interior](assets/color-grading-genre-lookbook/06-period-evening.jpg)
 
 QA: palette is carried by production design (wardrobe, architecture, practicals) rather than a blanket sepia filter in either frame, per the §42 warning against arbitrary sepia. **Pass.**
 

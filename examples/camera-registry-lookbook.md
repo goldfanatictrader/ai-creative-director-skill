@@ -20,6 +20,8 @@ Six registry entries spanning distinct categories were selected, each translated
 
 **Prompt (no brand names):** "A woman in her early 30s, short dark hair, tailored coat, standing by a rain-streaked city window in soft daylight, narrative drama mood. Large-format digital-cinema rendering: filmic highlight rolloff, natural skin rendering, high dynamic-range latitude, classic wide-format lens geometry, organic micro-contrast. No camera or recording equipment visible in frame, no HUD, no on-screen readout, no watermark, no logos or text."
 
+![ARRI ALEXA 35 character — narrative drama](assets/camera-registry-lookbook/01-arri-alexa-35.jpg)
+
 QA: soft window highlight rolloff and natural skin read consistent with the registry's stated character; no equipment artifact. **Pass.**
 
 ---
@@ -31,6 +33,8 @@ QA: soft window highlight rolloff and natural skin read consistent with the regi
 - `best_for`: action, vehicles, VFX plates, commercial
 
 **Prompt:** "The same woman ... wearing a fitted jacket, running alongside a moving car on a city street at dusk. High-detail modern cinema rendering, crisp motion geometry, strong dynamic range, clean action-ready sharpness, precise motion clarity. No camera or recording equipment visible in frame, no HUD, no on-screen readout, no watermark, no logos or text."
+
+![RED V-RAPTOR XL character — action/vehicle](assets/camera-registry-lookbook/02-red-v-raptor.jpg)
 
 QA: sharp, clean motion-friendly rendering with no rolling-shutter-style artifacts implied; no equipment visible. **Pass.**
 
@@ -44,6 +48,8 @@ QA: sharp, clean motion-friendly rendering with no rolling-shutter-style artifac
 
 **Prompt:** "The same woman's face ... in a hero beauty close-up against a plain seamless backdrop, soft directional studio light. Extreme still detail, large-format tonal separation, high microtexture skin resolution, natural pores and texture preserved, no plastic smoothing. No camera or recording equipment visible in frame, no HUD, no watermark, no logos or text."
 
+![Phase One IQ4 150MP character — beauty close-up](assets/camera-registry-lookbook/03-phase-one-iq4.jpg)
+
 QA: skin retains natural pore-level texture rather than plastic-smoothed AI skin (the exact anti-pattern §26 of `color-grading-bible.md` warns against); no equipment visible. **Pass.**
 
 ---
@@ -55,6 +61,8 @@ QA: skin retains natural pore-level texture rather than plastic-smoothed AI skin
 - `best_for`: street, documentary stills, editorial, travel
 
 **Prompt:** "The same woman ... walking through a crowded street market, candid unposed moment, natural available light. Documentary intimacy, compact premium still rendering, natural unforced color, rangefinder-style discipline in framing. No camera or recording equipment visible in frame, no HUD, no watermark, no logos or text."
+
+![Leica M11-P character — documentary street](assets/camera-registry-lookbook/04-leica-m11p.jpg)
 
 QA: candid, unposed street-documentary feel with natural available light; no equipment visible. **Pass.**
 
@@ -68,6 +76,8 @@ QA: candid, unposed street-documentary feel with natural available light; no equ
 
 **Prompt:** "The same woman ... in 1970s-style clothing standing on an old train platform, natural afternoon light. Photochemical cinema rendering, organic temporal film texture, classic organic grain, warm tonal character, gentle highlight rolloff. No camera or recording equipment visible in frame, no HUD, no watermark, no logos or text."
 
+![Panavision Millennium XL2 character — period](assets/camera-registry-lookbook/05-panavision-xl2.jpg)
+
 QA: warm organic film-like tonal character carried by wardrobe/location/light rather than a literal sepia filter (consistent with `color-grading-bible.md` §42 Period guidance); no equipment visible. **Pass.**
 
 ---
@@ -79,6 +89,8 @@ QA: warm organic film-like tonal character carried by wardrobe/location/light ra
 - `best_for`: epic landscapes, large-scale action, premium theatrical sequences
 
 **Prompt:** "The same woman ... standing as a small figure at the edge of a vast canyon landscape at golden hour. Maximum-scale photochemical capture, extreme negative-area detail, event-cinema spectacle scale, vast dynamic range across the landscape, epic sense of scale. No camera or recording equipment visible in frame, no HUD, no watermark, no logos or text."
+
+![IMAX Keighley character — epic landscape](assets/camera-registry-lookbook/06-imax-keighley.jpg)
 
 QA: subject rendered small against vast, detailed landscape achieving the intended epic-scale spectacle; no equipment visible. **Pass.**
 
