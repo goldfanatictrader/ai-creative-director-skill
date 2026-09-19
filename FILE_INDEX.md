@@ -56,6 +56,8 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `examples/assets/lighting-bible-lookbook/04-fire.jpg`
 - `examples/assets/lighting-bible-lookbook/05-vehicle-headlights.jpg`
 - `examples/assets/lighting-bible-lookbook/06-neon-signage.jpg`
+- `examples/assets/motion-bible-lookbook/01-low-complexity.mp4`
+- `examples/assets/motion-bible-lookbook/02-high-complexity.mp4`
 - `examples/assets/performance-bible-lookbook/01-adjective-only.jpg`
 - `examples/assets/performance-bible-lookbook/02-behavior-translation.jpg`
 - `examples/assets/performance-bible-lookbook/03-forbidden-overacting.jpg`
@@ -76,6 +78,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `examples/color-grading-genre-lookbook.md`
 - `examples/composition-bible-lookbook.md`
 - `examples/lighting-bible-lookbook.md`
+- `examples/motion-bible-lookbook.md`
 - `examples/performance-bible-lookbook.md`
 - `examples/project-grammar.md`
 - `examples/realism-level-lookbook.md`
