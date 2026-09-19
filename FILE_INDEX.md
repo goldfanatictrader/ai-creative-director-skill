@@ -17,6 +17,12 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `evals/publish-readiness.md`
 - `evals/sequence-preflight.md`
 - `evals/shot-feasibility.md`
+- `examples/assets/camera-bible-lookbook/01-floor-frontal.jpg`
+- `examples/assets/camera-bible-lookbook/02-knee-threequarter.jpg`
+- `examples/assets/camera-bible-lookbook/03-eye-profile.jpg`
+- `examples/assets/camera-bible-lookbook/04-chest-rear-threequarter.jpg`
+- `examples/assets/camera-bible-lookbook/05-shoulder-back.jpg`
+- `examples/assets/camera-bible-lookbook/06-aerial-frontal.jpg`
 - `examples/assets/camera-registry-lookbook/01-arri-alexa-35.jpg`
 - `examples/assets/camera-registry-lookbook/02-red-v-raptor.jpg`
 - `examples/assets/camera-registry-lookbook/03-phase-one-iq4.jpg`
@@ -45,6 +51,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `examples/assets/vfx-compositing-lookbook/01-sky-replacement.jpg`
 - `examples/assets/vfx-compositing-lookbook/02-object-removal.jpg`
 - `examples/assets/vfx-compositing-lookbook/03-atmosphere-integration.jpg`
+- `examples/camera-bible-lookbook.md`
 - `examples/camera-registry-lookbook.md`
 - `examples/color-grading-genre-lookbook.md`
 - `examples/project-grammar.md`
