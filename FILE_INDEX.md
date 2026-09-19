@@ -50,6 +50,10 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `examples/assets/composition-bible-lookbook/02-negative-space.jpg`
 - `examples/assets/composition-bible-lookbook/03-compression.jpg`
 - `examples/assets/composition-bible-lookbook/04-wide-depth.jpg`
+- `examples/assets/continuity-bridge-lookbook/01-shot1.mp4`
+- `examples/assets/continuity-bridge-lookbook/02-shot2.mp4`
+- `examples/assets/continuity-bridge-lookbook/shot1-end-frame.jpg`
+- `examples/assets/continuity-bridge-lookbook/shot2-start-frame.jpg`
 - `examples/assets/lighting-bible-lookbook/01-window.jpg`
 - `examples/assets/lighting-bible-lookbook/02-practical-lamp.jpg`
 - `examples/assets/lighting-bible-lookbook/03-fluorescent.jpg`
@@ -77,6 +81,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `examples/camera-registry-lookbook.md`
 - `examples/color-grading-genre-lookbook.md`
 - `examples/composition-bible-lookbook.md`
+- `examples/continuity-bridge-lookbook.md`
 - `examples/lighting-bible-lookbook.md`
 - `examples/motion-bible-lookbook.md`
 - `examples/performance-bible-lookbook.md`
