@@ -14,6 +14,8 @@ Track:
 - emotional state
 - voice state when dialogue exists
 
+Read a character's **identity** (stable facts that don't change shot-to-shot: face, backstory, relationships, default wardrobe) and their **current state** (this scene's wardrobe/injury/emotional state, and — critically — what they currently know) as two separate lookups, not one merged file. A fact belonging to identity is not automatically something the character presently knows or that currently applies: "she has an older brother" is identity; "she doesn't yet know the letter came from him" is state. Conflating the two is how a character ends up reacting to information they haven't been given yet in the story.
+
 ## Prop
 Track:
 - identity / canonical asset ID

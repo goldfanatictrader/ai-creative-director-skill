@@ -73,8 +73,31 @@ When two sources of truth disagree (a brand bible says "clean, minimal" but a su
 ```
 If the conflict is between two things at the SAME authority level (e.g. two director decisions that contradict), that's a real unresolved conflict — flag it to the user rather than picking silently, since neither side of this skill can outrank the other.
 
-## 7. Self-check
+## 7. Derived Views vs. Source of Truth
+Per-scene/per-shot/per-asset YAML files (§1) are the only writable truth. Anything that summarizes or rolls them up for human reading — a running scene-state card, a continuity-map summary, a character-snapshot digest — is a **derived view**: regenerate it from the source files, never hand-edit it independently. Two files that can each be edited directly will eventually disagree about where a character is or what a prop's state is; a file that is always regenerated from the one writable source cannot.
+```
+project-state/scenes/SC_07.yaml        <- writable truth
+project-state/_derived/SC_07-card.md   <- regenerated from SC_07.yaml, never edited by hand
+```
+If a derived view and its source ever disagree, the source wins and the view is stale — regenerate it, don't patch it.
+
+## 8. Bounding State Per Shot/Scene for Long Sequences
+State should not grow linearly with project length. A continuity note for shot 80 should be roughly the same size as one for shot 8 — a bounded delta (what changed, what's now true) plus a pointer to current canonical state, not an ever-growing recap of everything that happened before it:
+```
+SC14_SH03 delta:
+  - CHAR_01: wardrobe now WARD_03 (was WARD_02, changed SC13_SH05)
+  - LOC_02: rain started (was dry)
+  - new unresolved setup: "she still doesn't know he read the letter"
+```
+If a shot's continuity note is turning into a summary of the whole project so far, that's a signal to snapshot current state into the asset/scene file (§1) and let the next shot's note reference that snapshot, rather than re-deriving it from history each time.
+
+## 9. Backfilling State for an In-Progress Project
+If shots/scenes already exist without `project-state/` having been maintained from the start, don't try to reconstruct history from conversation memory. Do a deliberate backfill pass instead: read the existing shots/scenes/assets, write the state files §1 describes, and tag every reconstructed fact `inferred` (§5) rather than `known` — a fact read back out of existing material is a reasonable starting point, not a confirmed one, until the user reviews it. Only promote it to `known` after that confirmation.
+
+## 10. Self-check
 - Is anything load-bearing sitting only in conversation memory that should be in `project-state/`?
 - Does every changed asset have a version tag, with the previous version kept, not overwritten?
 - If an upstream asset just changed, has the dependency list been checked for downstream stale shots?
 - Is anything currently being treated as `known` that's actually only `assumed` or `inferred`?
+- Is a derived view being hand-edited instead of regenerated from its source (§7)?
+- Is a shot's continuity note re-summarizing the whole project instead of stating a bounded delta (§8)?
