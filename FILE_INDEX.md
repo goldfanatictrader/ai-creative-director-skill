@@ -3,6 +3,7 @@
 Generated/maintained as the repository inventory. Repository QA fails when this list drifts from tracked files.
 
 - `.github/workflows/qa.yml`
+- `CLAUDE.md`
 - `evals/audience-perception.md`
 - `evals/color-qc.md`
 - `evals/continuity-check.md`
@@ -16,6 +17,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `evals/publish-readiness.md`
 - `evals/sequence-preflight.md`
 - `evals/shot-feasibility.md`
+- `examples/color-grading-genre-lookbook.md`
 - `examples/project-grammar.md`
 - `examples/train-platform-shot.md`
 - `FILE_INDEX.md`
