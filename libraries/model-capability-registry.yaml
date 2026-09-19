@@ -1,5 +1,5 @@
 registry_version: "1.0"
-updated: "2026-09-18"
+updated: "2026-09-20"
 freshness_policy:
   default_max_age_days: 30
   material_decisions_require_current_verification: true
@@ -34,6 +34,43 @@ profile_template:
   failure_modes: []
 
 models:
+  - provider: Google
+    model: Gemini Omni (Flash)
+    status: verify_before_use
+    verified_at: "2026-09-20"
+    official_sources:
+      - https://morphic.com/id/resources/how-to/gemini-omni
+      - https://github.com/free-gemini-omni/awesome-gemini-omni-prompts
+    source_note: >-
+      Neither source is a first-party Google documentation page (morphic.com
+      is a third-party platform's how-to; the GitHub repo is a community
+      prompt collection). No official Google page for Gemini Omni was found
+      in this pass. Re-verify against an official Google source before any
+      material routing decision, per the freshness policy above.
+    capabilities:
+      text_to_video: "yes - text, image, and video accepted as simultaneous multimodal input in one prompt"
+      image_to_video: "yes - images can be part of the same multimodal input"
+      multi_reference: "yes - stated guidance is to load all references simultaneously and treat them as unified scene components"
+      first_last_frame: unknown
+      extend: "no - explicitly stated: 'no extension capability exists'; contain the full action within one clip"
+      video_edit: "yes - conversational/iterative editing across multi-turn prompts; model 'preserves what works and only modifies what you ask'"
+      motion_transfer: unknown
+      audio_generation: "yes - native audio generated synchronized with video movement; always specify dialogue/SFX/atmosphere/music explicitly in the prompt"
+      dialogue_lipsync: unknown - audio is synced to on-screen movement/action, but lipsync specifically for dialogue was not confirmed in either source
+    limits:
+      documented_max_duration_s: 10
+      practical_duration_s: 10
+      aspect_ratios: ["16:9", "9:16"]
+      resolutions: ["720p"]
+      accepted_reference_types: ["text", "image", "video"]
+    restrictions:
+      regions: []
+      preview_or_experimental: "yes - announced at Google I/O 2026 as the initial 'Gemini Omni Flash' release"
+    project_evidence: []
+    failure_modes:
+      - "Iterative edits can unintentionally alter unrelated parts of the scene unless explicitly told not to; add phrasing like 'Don't change anything else' / 'Keep everything else the same' to suppress unwanted changes."
+      - "No clip-extend capability - a shot's complete action must fit within the 10s ceiling; plan coverage as separate generations rather than expecting an extend step."
+      - "Reserve dramatic scene changes for separate generations rather than one iterative edit chain, per stated guidance."
   - provider: Google
     model: Veo
     status: verify_before_use
