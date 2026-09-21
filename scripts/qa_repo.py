@@ -40,7 +40,7 @@ except Exception as exc:
     fail(f"manifest.json invalid: {exc}")
 
 # Internal explicit file references.
-ref_pattern = re.compile(r"(?P<path>(?:knowledge|workflows|evals|schemas|libraries|templates|examples|sources)/[A-Za-z0-9._-]+\.(?:md|json|ya?ml))")
+ref_pattern = re.compile(r"(?<!\\.github/)(?P<path>(?:knowledge|workflows|evals|schemas|libraries|templates|examples|sources)/[A-Za-z0-9._-]+\\.(?:md|json|ya?ml))")
 for path in sorted(ROOT.rglob("*")):
     if not path.is_file() or path.suffix.lower() not in {".md", ".json", ".yaml", ".yml", ".py"}:
         continue
