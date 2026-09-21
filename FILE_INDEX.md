@@ -107,6 +107,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `knowledge/constraint-priority-system.md`
 - `knowledge/continuity-bible.md`
 - `knowledge/creative-direction.md`
+- `knowledge/creative-strategy-engine.md`
 - `knowledge/dialogue-voice-bible.md`
 - `knowledge/editing-bible.md`
 - `knowledge/generation-strategy.md`
@@ -165,6 +166,7 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `schemas/video-qa-report.schema.json`
 - `scripts/qa_repo.py`
 - `SKILL.md`
+- `THIRD_PARTY_NOTICES.md`
 - `sources/official-sources.md`
 - `templates/color-grading-brief.md`
 - `templates/creative-treatment.md`
@@ -183,3 +185,4 @@ Generated/maintained as the repository inventory. Repository QA fails when this 
 - `workflows/shot-design.md`
 - `workflows/social-video.md`
 - `workflows/storyboard.md`
+- `workflows/veo-3-1.md`
