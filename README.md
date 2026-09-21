@@ -9,7 +9,8 @@ The agent must make creative decisions before writing generation prompts. Never 
 The default reasoning chain:
 
 ```
-INTENT → BRIEF → VIDEO TYPE ROUTING → CREATIVE PROBLEM → CONCEPT → STORY/EXPERIENCE
+INTENT → BRIEF → VIDEO TYPE ROUTING → CREATIVE PROBLEM → STRATEGIC INSIGHT (when needed)
+→ STRUCTURED IDEATION (when needed) → CONCEPT → STORY/EXPERIENCE
 → VISUAL LANGUAGE → CHARACTER/WORLD → CANONICAL ASSET LOCKS → SCENE GEOGRAPHY/STATE
 → SEQUENCE DESIGN → SEQUENCE PREFLIGHT → BLOCKING → PERFORMANCE
 → CINEMATOGRAPHY → CAMERA → MOTION/PHYSICS → LIGHTING → SOUND → EDITORIAL RHYTHM
@@ -23,8 +24,8 @@ Two adversarial passes are load-bearing, not optional: `evals/creative-critic.md
 ## What this package contains
 
 - **`SKILL.md`** — primary operating rules and decision framework (the entrypoint)
-- **`knowledge/`** — discipline bibles: storytelling, cinematography, camera, camera/lens/film-stock selection (real verified equipment specs), color (creative + full professional grading pipeline), performance, motion, continuity, production design, sound, dialogue/voice, genre-specific grammars (action/horror/comedy/product), video-type taxonomy & router, project state/versioning/dependency system, human approval gates & feedback translation, governance/locks, AI-video failure patterns, and more
-- **`workflows/`** — task-specific procedures: concept development, film/narrative development, commercial, music video, social video, storyboard, casting (live-action + animation/creature/robot), professional color grading, prompt compilation
+- **`knowledge/`** — discipline bibles, including a structured upstream creative-strategy/ideation engine adapted from Serge Shima's CC BY 4.0 Creative Director Skill: storytelling, cinematography, camera, camera/lens/film-stock selection (real verified equipment specs), color (creative + full professional grading pipeline), performance, motion, continuity, production design, sound, dialogue/voice, genre-specific grammars (action/horror/comedy/product), video-type taxonomy & router, project state/versioning/dependency system, human approval gates & feedback translation, governance/locks, AI-video failure patterns, and more
+- **`workflows/`** — task-specific procedures: concept development, film/narrative development, commercial, music video, social video, storyboard, casting (live-action + animation/creature/robot), professional color grading, prompt compilation, plus a provider-specific Google Veo 3.1 execution workflow
 - **`schemas/`** — JSON Schema contracts for creative brief, concept, character, scene, shot, camera, performance, continuity, generation spec
 - **`libraries/`** — YAML vocabularies and rule tables: camera movements + complexity scores, real camera/lens/film-stock registries with verified specs, shot grammar, emotional behaviors, failure patterns, color grading order/look archetypes/scopes reference, transitions, lighting setups
 - **`evals/`** — readiness and quality checks: creative-critic (red team), audience-perception, shot-feasibility (complexity scoring), continuity-check, performance-check, gap/redundancy/drift-check, output-critique-repair, color-qc, generation-readiness, creative-quality
@@ -54,3 +55,16 @@ This package grows by accretion, but repository QA is expected to prevent silent
 v1.3 treats recurring identity, markings, scale, props, location geography, time/weather/light, narrative motivation, animal/creature behavior, audio-sync planning, ambience/Foley, and emotional ending design as pre-generation constraints. Final-video QA is a last defense, not the first time continuity is checked.
 
 Final-video review combines native temporal/video vision when available with deterministic technical verification; perceptual observations and measured file facts are kept separate.
+
+
+## Creative strategy + Veo routing
+
+The package now separates three responsibilities:
+
+1. **Creative strategy / ideation** — `knowledge/creative-strategy-engine.md` strengthens weak or unresolved concepts using tension/insight mining, structured ideation, anti-cliché tests, and recursive refinement.
+2. **Model-agnostic production direction** — the existing core turns the approved concept into story, sequence, blocking, performance, cinematography, continuity, and generation strategy.
+3. **Google Veo 3.1 execution** — `workflows/veo-3-1.md` chooses Veo generation mode, references, first/last-frame strategy, audio, prompt compilation, provider constraints, and shot-level repair.
+
+For cinematic multi-shot work, the Veo workflow defaults to **one shot per generation** and **one storyboard/keyframe image per generation file**.
+
+The strategy module adapts material from Serge Shima's `smixs/creative-director-skill` under CC BY 4.0. See `THIRD_PARTY_NOTICES.md`.
