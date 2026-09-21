@@ -29,6 +29,8 @@ INTENT
 → BRIEF
 → VIDEO TYPE ROUTING
 → CREATIVE PROBLEM
+→ STRATEGIC INSIGHT (WHEN NEEDED)
+→ STRUCTURED IDEATION (WHEN NEEDED)
 → CONCEPT
 → STORY / EXPERIENCE
 → VISUAL LANGUAGE
@@ -64,6 +66,25 @@ At CINEMATOGRAPHY, deciding what real-world image system a look should behave li
 Not every video is narrative, and not every video needs a hand-built workflow. Before CREATIVE PROBLEM, classify the brief per `knowledge/video-taxonomy.md`: Purpose × Format × Genre × Platform × Duration × Audience × Realism × Production Mode. This determines which `workflows/*.md` to follow (if one exists for the family) and which genre-specific inflections to layer on top of the standard chain (e.g. documentary is observational — do not over-direct blocking; social media overrides normal pacing with a first-2-second-hook rule; corporate wants restrained performance and low camera complexity over style). Routing is a classification step, not a separate creative decision — one line stating the 8-axis classification is usually enough, then proceed into CREATIVE PROBLEM.
 
 Do not invent a new named "type" system per project. The taxonomy in `knowledge/video-taxonomy.md` and its ~15 families already cover effectively all commercial/narrative/social production — if a request truly doesn't fit, say so in one line and fall back to the closest family's inflections rather than forcing an exact match.
+
+## Upstream creative strategy and ideation
+
+When the user does not yet have an approved concept, or when a concept is generic/interchangeable, use `knowledge/creative-strategy-engine.md` and `workflows/concept-development.md` before story/shot design.
+
+That layer owns:
+- brief decomposition,
+- human/category/cultural tension,
+- insight formation,
+- structured ideation across multiple method families,
+- anti-cliché and competitor-substitution tests,
+- kill-your-darlings critique,
+- concept-level refinement.
+
+Do not force this layer onto an already-approved downstream shot request.
+
+Do not treat award-oriented numerical scores as objective truth. Scores may diagnose weakness, but story clarity, audience relevance, emotional specificity, executability, and coherence have authority over prestige scoring.
+
+The structured ideation module includes adapted methodology from Serge Shima's `smixs/creative-director-skill` under CC BY 4.0. Preserve attribution in `THIRD_PARTY_NOTICES.md`.
 
 ## Creative hierarchy
 
@@ -508,6 +529,28 @@ and resolve the blocking issue first.
 FEASIBILITY answers whether the shot is plausible. GENERATION STRATEGY then decides how it should be made (T2V, I2V, reference-to-video, first/last-frame, edit/extend, compositing, traditional footage) and which verified model/provider is appropriate. Only after that decision should GENERATION SPEC be finalized, because method/provider capabilities determine required references, duration, aspect ratio, and other execution parameters.
 
 When model capabilities are time-sensitive, follow `knowledge/model-capabilities.md` and `libraries/model-capability-registry.yaml`: use a dated verified profile when fresh enough for the decision, otherwise verify current capabilities before making a material routing decision. Never invent support for a generation mode.
+
+## Google Veo 3.1 execution routing
+
+When Google Veo 3.1 is the selected generation provider, read `workflows/veo-3-1.md` after GENERATION STRATEGY and before final prompt compilation.
+
+The Veo workflow owns provider-specific execution decisions:
+- text-to-video vs image-to-video,
+- reference-image / Ingredients routing,
+- first + last frame interpolation,
+- compatible video extension,
+- reference-image budgeting,
+- Veo prompt anatomy,
+- native-audio prompting,
+- provider-specific negative constraints,
+- technical configuration validation,
+- Veo-specific output repair.
+
+The root skill retains authority over concept, story, blocking, performance, cinematography, continuity, and editorial intent.
+
+For cinematic multi-shot work, default to one controllable shot per generation and one storyboard/keyframe image per generation file. A flattened contact sheet is for human review, not the normal first-frame constraint.
+
+Provider capabilities are time-sensitive. Verify material model IDs, mode support, resolution/duration restrictions, output counts, and parameter names against current official Google documentation instead of copying assumptions across Gemini API / Google Cloud surfaces.
 
 ## Native final-video QA
 
